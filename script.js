@@ -1,78 +1,55 @@
-const skills = {
-  ai: [
-    ["Claude Code", "AI-assisted prototyping and implementation", "CC"],
-    ["Codex", "Coding agent collaboration and iteration", "CX"],
-    ["Coze", "Multi-agent workflow building", "CZ"],
-    ["Dify", "Agent orchestration and AI app workflow", "DF"],
-    ["Prompt Engineering", "Role, rubric, evaluation and refinement", "PE"],
-    ["RAG", "Knowledge-base backed character and product logic", "RG"],
-  ],
-  product: [
-    ["PRD", "Requirement definition and delivery specs", "PR"],
-    ["User Research", "Interview, persona and scenario analysis", "UR"],
-    ["Flow Design", "Interaction flow, launch rhythm and QA loop", "FL"],
-    ["Localization Strategy", "Culture, context and market adaptation", "LS"],
-    ["Content Safety", "Badcase analysis and evaluation set design", "CS"],
-    ["Prototype Building", "Fast validation with AI-native tooling", "PB"],
-  ],
-  data: [
-    ["SQL", "Basic query and structured data thinking", "SQL"],
-    ["Python", "Analysis scripts and automation basics", "PY"],
-    ["Power BI", "Dashboard and business data presentation", "BI"],
-    ["QGIS", "Spatial data and map-based visualization", "QG"],
-    ["AntConc", "Corpus analysis and frequency patterns", "AC"],
-    ["Voyant", "Text visualization and corpus exploration", "VY"],
-  ],
-  language: [
-    ["Spanish", "DELE C1 / TEM-8 excellent", "ES"],
-    ["English", "CET-4 / CET-6, product communication", "EN"],
-    ["Chinese", "Native, product writing and research", "ZH"],
-    ["Latin America Context", "UGC, safety and cultural sensitivity", "LA"],
-    ["Europe Context", "Study and life experience in Spain", "EU"],
-    ["Multilingual Content", "Tri-lingual creation and localization judgment", "MC"],
-  ],
-  tools: [
-    ["Figma", "Interface sketches and product communication", "FG"],
-    ["Notion", "Portfolio, documentation and knowledge base", "NT"],
-    ["Excel", "Data cleaning and lightweight analysis", "EX"],
-    ["PowerPoint", "Narrative deck and stakeholder communication", "PP"],
-    ["XML / RDF / OWL", "Digital humanities and semantic data basics", "XO"],
-    ["Tableau", "Data exploration and visual storytelling", "TB"],
-  ],
-};
+/* ============================================================
+   SKILL GROUPS — rendered as flat pills, grouped by category
+   ============================================================ */
 
-const grid = document.querySelector("#skill-grid");
-const tabs = document.querySelectorAll(".skill-tab");
+const skillGroups = [
+  {
+    zh: "AI / Agent",
+    en: "AI / Agent",
+    items: ["Claude Code", "Codex", "Coze", "Dify", "Prompt Engineering", "RAG"],
+  },
+  {
+    zh: "产品 / Product",
+    en: "Product",
+    items: ["PRD", "User Research", "Flow Design", "Localization Strategy", "Content Safety", "Prototype Building"],
+  },
+  {
+    zh: "数据 / Data",
+    en: "Data",
+    items: ["SQL", "Python", "Power BI", "QGIS", "AntConc", "Voyant"],
+  },
+  {
+    zh: "语言 / Language",
+    en: "Language",
+    items: ["Spanish (DELE C1 · TEM-8)", "English (CET-6)", "Chinese (Native)", "LATAM Context", "EU Context"],
+  },
+  {
+    zh: "工具 / Tools",
+    en: "Tools",
+    items: ["Figma", "Notion", "Excel", "PowerPoint", "Tableau", "XML / RDF / OWL"],
+  },
+];
 
-function renderSkills(category) {
-  grid.innerHTML = skills[category]
+function renderSkillGroups(lang) {
+  const root = document.querySelector("#skill-groups");
+  if (!root) return;
+  root.innerHTML = skillGroups
     .map(
-      ([name, description, icon]) => `
-        <article class="skill-card">
-          <span class="skill-icon">${icon}</span>
-          <div>
-            <strong>${name}</strong>
-            <span>${description}</span>
+      (group) => `
+        <div class="skill-group">
+          <p class="skill-group-name">${group[lang] || group.en}</p>
+          <div class="skill-pills">
+            ${group.items.map((item) => `<span class="skill-pill">${item}</span>`).join("")}
           </div>
-        </article>
+        </div>
       `,
     )
     .join("");
 }
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((item) => item.classList.remove("active"));
-    tab.classList.add("active");
-    renderSkills(tab.dataset.skill);
-  });
-});
-
-renderSkills("ai");
-
-if (window.lucide) {
-  window.lucide.createIcons();
-}
+/* ============================================================
+   I18N — collect [data-en] elements, swap textContent on toggle
+   ============================================================ */
 
 const i18nElements = document.querySelectorAll("[data-en]");
 i18nElements.forEach((el) => {
@@ -86,10 +63,11 @@ function setLang(lang) {
     const next = el.dataset[lang];
     if (next) el.textContent = next;
   });
+  renderSkillGroups(lang);
   try {
     localStorage.setItem("site-lang", lang);
   } catch (e) {
-    /* localStorage may be unavailable */
+    /* localStorage unavailable */
   }
 }
 
@@ -110,3 +88,45 @@ if (langToggle) {
     setLang(current === "zh" ? "en" : "zh");
   });
 }
+
+/* ============================================================
+   LUCIDE ICONS
+   ============================================================ */
+
+if (window.lucide) {
+  window.lucide.createIcons();
+}
+
+/* ============================================================
+   SCROLL REVEAL — fade up on entering viewport
+   ============================================================ */
+
+(function initReveal() {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const targets = document.querySelectorAll(".reveal");
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // small stagger when multiple siblings enter together
+          const delay = Math.min(index * 60, 240);
+          entry.target.style.transitionDelay = `${delay}ms`;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -8% 0px",
+    },
+  );
+
+  targets.forEach((el) => observer.observe(el));
+})();

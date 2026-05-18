@@ -25,10 +25,10 @@
         <span>Ma Chen</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#timeline">Timeline</a>
+        <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#side-projects">Geek Space</a>
-        <a href="#skills">Skills</a>
+        <a href="#timeline">Timeline</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="lang-toggle" type="button" aria-label="Switch language">
@@ -39,7 +39,7 @@
 
     <main id="top">
       <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-grid">
+        <div class="hero-grid reveal">
           <div class="hero-copy">
             <p class="hero-greeting">Hey, I'm <em>Chen</em></p>
             <h1 id="hero-title" class="display-italic">
@@ -74,68 +74,51 @@
             </div>
           </div>
         </div>
-
-        <aside class="hero-metrics" aria-label="Profile highlights">
-          <div>
-            <p class="metric-index">#01</p>
-            <span>30+</span>
-            <p data-en="User Interviews">User Interviews</p>
-          </div>
-          <div>
-            <p class="metric-index">#02</p>
-            <span>12K+</span>
-            <p data-en="UGC Samples">UGC Samples</p>
-          </div>
-          <div>
-            <p class="metric-index">#03</p>
-            <span>25%</span>
-            <p data-en="Spanish AI Buddy MAU">Spanish AI Buddy MAU</p>
-          </div>
-        </aside>
       </section>
 
-      <section id="timeline" class="section-shell timeline-section" aria-labelledby="timeline-title">
-        <div class="section-heading section-heading-center">
-          <p class="eyebrow">/ Trajectory</p>
-          <h2 id="timeline-title" class="display-serif">
-            从 <em>Language</em> 到 <em>AI Products</em>
-          </h2>
-          <p class="section-sub" data-en="Not a linear job list — a slowly forming product route through language, culture, data, and AI tooling.">
-            不是线性的职位列表，而是一条逐渐形成的产品航线：语言、文化、数据、AI 工具链。
-          </p>
-        </div>
+      <section id="about" class="about-section section-shell" aria-labelledby="about-title">
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <h2 id="about-title" class="about-col-title display-serif">
+              关于 <em>我</em>
+            </h2>
+            <p class="about-para" data-en="I'm an AI Product Manager spanning Spanish linguistics, digital humanities, AIGC globalization, and AI language companions — connecting language, culture, and agent workflows.">
+              我是一名 AI 产品经理，从西班牙语本科到数字人文硕士，再到 AIGC 出海与 AI 语伴产品，把语言、文化和 Agent 工作流连接起来。
+            </p>
+            <p class="about-para" data-en="Focused on user research, cross-language localization, and prompt system design. Good AI products come from iterating on real scenarios, not from stacking model capabilities.">
+              专注用户研究、跨语言本地化与 Prompt 系统设计，相信好的 AI 产品来自对真实场景的反复打磨，而不是模型能力的堆砌。
+            </p>
 
-        <div class="timeline">
-          <article class="timeline-item">
-            <time>2026.04 — Now</time>
-            <h3 data-en="AI-Native Creative Experiments">AI 原生创意产品实验</h3>
-            <p data-en="Solo-designed a pixel-alien desktop pet planet — validating the single-person product loop with RAG, character knowledge bases, and AI generation.">独立设计像素外星人桌面宠物星球，用 RAG、角色知识库和 AI 生成内容验证单人产品开发链路。</p>
-          </article>
-          <article class="timeline-item">
-            <time>2025.10 — 2026.04</time>
-            <h3 data-en="HelloTalk AI Spanish Companion">HelloTalk AI 西语语伴</h3>
-            <p data-en="Led the 0→1 launch of the Spanish AI companion. From 30+ in-depth interviews, defined personas, scenario library, prompt framework, and phased rollout.">主导西语 AI 语伴从 0 到 1，基于 30+ 深访定义用户画像、场景库、Prompt 框架与上线灰度节奏。</p>
-          </article>
-          <article class="timeline-item">
-            <time>2024.06 — 2025.01</time>
-            <h3 data-en="Content Safety Review · LATAM UGC">内容安全评测 / 拉美 UGC 场景</h3>
-            <p data-en="Processed 12,000+ UGC samples, distilling violation cases, edge samples, and LATAM cultural nuances into an explainable evaluation framework.">处理 12,000+ 条 UGC 样本，沉淀违规 case、边界样本与拉美文化敏感点，搭建可解释评测体系。</p>
-          </article>
-          <article class="timeline-item">
-            <time>2024 — 2025</time>
-            <h3 data-en="Digital Humanities MA, Universitat de Barcelona">巴塞罗那大学数字人文硕士</h3>
-            <p data-en="Focused on multilingual corpora, data visualization, semantic web, and XML. Delivered a 15,000+ word corpus analysis with top thesis grade.">聚焦多语言语料库、数据可视化、语义网与 XML，完成 15,000+ 词语料库分析报告并获优秀论文评级。</p>
-          </article>
-          <article class="timeline-item">
-            <time>2020 — 2024</time>
-            <h3 data-en="Spanish BA & Madrid Exchange">西班牙语本科与交换学习</h3>
-            <p data-en="Spanish major at Lanzhou Jiaotong University, then exchange at Universidad Complutense de Madrid — built foundations in Spanish language, literary narrative, and cross-cultural understanding.">兰州交通大学西班牙语专业，后赴马德里康普顿斯大学交换，建立西语语言、文学叙事与跨文化理解基础。</p>
-          </article>
+            <div class="about-stats">
+              <div class="about-stat-card">
+                <p class="stat-index">#01</p>
+                <p class="stat-num">30+</p>
+                <p class="stat-label" data-en="User Interviews">用户深访</p>
+              </div>
+              <div class="about-stat-card">
+                <p class="stat-index">#02</p>
+                <p class="stat-num">12K+</p>
+                <p class="stat-label" data-en="UGC Samples">UGC 样本</p>
+              </div>
+              <div class="about-stat-card">
+                <p class="stat-index">#03</p>
+                <p class="stat-num">25%</p>
+                <p class="stat-label" data-en="Spanish AI Buddy MAU">西语 AI 语伴 MAU</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right reveal">
+            <h2 class="about-col-title display-serif">
+              核心 <em>技能</em>
+            </h2>
+            <div class="skill-groups" id="skill-groups"></div>
+          </div>
         </div>
       </section>
 
       <section id="work" class="section-shell work-section" aria-labelledby="work-title">
-        <div class="section-heading section-heading-center">
+        <div class="section-heading section-heading-center reveal">
           <p class="eyebrow">/ Selected Missions</p>
           <h2 id="work-title" class="display-serif">
             精选 <em>项目</em> &amp; <em>Cases</em>
@@ -146,7 +129,7 @@
         </div>
 
         <div class="project-list">
-          <article class="project-item">
+          <article class="project-item reveal">
             <div class="project-info">
               <span class="proj-tag">/ 01 — AI Language Learning</span>
               <h3 class="proj-name">
@@ -210,7 +193,7 @@
             </div>
           </article>
 
-          <article class="project-item">
+          <article class="project-item reveal">
             <div class="project-info">
               <span class="proj-tag">/ 02 — AIGC Localization</span>
               <h3 class="proj-name">
@@ -290,7 +273,7 @@
       </section>
 
       <section id="side-projects" class="section-shell side-projects-section" aria-labelledby="side-projects-title">
-        <div class="section-heading section-heading-center">
+        <div class="section-heading section-heading-center reveal">
           <p class="eyebrow">/ Geek Space</p>
           <h2 id="side-projects-title" class="display-serif">
             个人 <em>实验</em> &amp; <em>Side Projects</em>
@@ -301,7 +284,7 @@
         </div>
 
         <div class="sp-grid">
-          <article class="sp-card">
+          <article class="sp-card reveal">
             <div class="sp-card-head">
               <p class="sp-card-num">/ 01</p>
               <span class="sp-card-status status-done">
@@ -323,7 +306,7 @@
             </div>
           </article>
 
-          <article class="sp-card sp-card-placeholder">
+          <article class="sp-card sp-card-placeholder reveal">
             <div class="sp-card-head">
               <p class="sp-card-num">/ 02</p>
               <span class="sp-card-status status-building">
@@ -344,46 +327,48 @@
         </div>
       </section>
 
-      <section id="skills" class="section-shell skills-section" aria-labelledby="skills-title">
-        <div class="section-heading section-heading-center">
-          <p class="eyebrow">/ Skill Stack</p>
-          <h2 id="skills-title" class="display-serif">
-            工具栈 &amp; <em>Methods</em>
+      <section id="timeline" class="section-shell timeline-section" aria-labelledby="timeline-title">
+        <div class="section-heading section-heading-center reveal">
+          <p class="eyebrow">/ Trajectory</p>
+          <h2 id="timeline-title" class="display-serif">
+            从 <em>Language</em> 到 <em>AI Products</em>
           </h2>
-          <p class="section-sub" data-en="Skill cards show what I use to ship — grouped by direction, switchable.">
-            技能卡片展示「我用什么把产品做出来」，按方向分组、可切换查看。
+          <p class="section-sub" data-en="Not a linear job list — a slowly forming product route through language, culture, data, and AI tooling.">
+            不是线性的职位列表，而是一条逐渐形成的产品航线：语言、文化、数据、AI 工具链。
           </p>
         </div>
 
-        <div class="skill-console">
-          <div class="skill-tabs" role="tablist" aria-label="Skill categories">
-            <button class="skill-tab active" type="button" data-skill="ai" role="tab">
-              <i data-lucide="sparkles"></i>
-              AI / Agent
-            </button>
-            <button class="skill-tab" type="button" data-skill="product" role="tab">
-              <i data-lucide="layout-dashboard"></i>
-              Product
-            </button>
-            <button class="skill-tab" type="button" data-skill="data" role="tab">
-              <i data-lucide="chart-no-axes-combined"></i>
-              Data
-            </button>
-            <button class="skill-tab" type="button" data-skill="language" role="tab">
-              <i data-lucide="languages"></i>
-              Language
-            </button>
-            <button class="skill-tab" type="button" data-skill="tools" role="tab">
-              <i data-lucide="blocks"></i>
-              Tools
-            </button>
-          </div>
-          <div class="skill-grid" id="skill-grid" aria-live="polite"></div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <time>2026.04 — Now</time>
+            <h3 data-en="AI-Native Creative Experiments">AI 原生创意产品实验</h3>
+            <p data-en="Solo-designed a pixel-alien desktop pet planet — validating the single-person product loop with RAG, character knowledge bases, and AI generation.">独立设计像素外星人桌面宠物星球，用 RAG、角色知识库和 AI 生成内容验证单人产品开发链路。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2025.10 — 2026.04</time>
+            <h3 data-en="HelloTalk AI Spanish Companion">HelloTalk AI 西语语伴</h3>
+            <p data-en="Led the 0→1 launch of the Spanish AI companion. From 30+ in-depth interviews, defined personas, scenario library, prompt framework, and phased rollout.">主导西语 AI 语伴从 0 到 1，基于 30+ 深访定义用户画像、场景库、Prompt 框架与上线灰度节奏。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2024.06 — 2025.01</time>
+            <h3 data-en="Content Safety Review · LATAM UGC">内容安全评测 / 拉美 UGC 场景</h3>
+            <p data-en="Processed 12,000+ UGC samples, distilling violation cases, edge samples, and LATAM cultural nuances into an explainable evaluation framework.">处理 12,000+ 条 UGC 样本，沉淀违规 case、边界样本与拉美文化敏感点，搭建可解释评测体系。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2024 — 2025</time>
+            <h3 data-en="Digital Humanities MA, Universitat de Barcelona">巴塞罗那大学数字人文硕士</h3>
+            <p data-en="Focused on multilingual corpora, data visualization, semantic web, and XML. Delivered a 15,000+ word corpus analysis with top thesis grade.">聚焦多语言语料库、数据可视化、语义网与 XML，完成 15,000+ 词语料库分析报告并获优秀论文评级。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2020 — 2024</time>
+            <h3 data-en="Spanish BA & Madrid Exchange">西班牙语本科与交换学习</h3>
+            <p data-en="Spanish major at Lanzhou Jiaotong University, then exchange at Universidad Complutense de Madrid — built foundations in Spanish language, literary narrative, and cross-cultural understanding.">兰州交通大学西班牙语专业，后赴马德里康普顿斯大学交换，建立西语语言、文学叙事与跨文化理解基础。</p>
+          </article>
         </div>
       </section>
 
       <section id="contact" class="section-shell contact-section" aria-labelledby="contact-title">
-        <div class="section-heading section-heading-center">
+        <div class="section-heading section-heading-center reveal">
           <p class="eyebrow">/ Contact</p>
           <h2 id="contact-title" class="display-serif">
             保持 <em>联系</em> &amp; <em>Stay Connected</em>
@@ -392,7 +377,7 @@
             如果你关注 AI 产品、出海 AIGC、本地化内容体验或创意型 Agent 产品，可以从这里找到我。
           </p>
         </div>
-        <div class="contact-actions">
+        <div class="contact-actions reveal">
           <a href="mailto:ccchenma@gmail.com">
             <i data-lucide="mail"></i>
             ccchenma@gmail.com
