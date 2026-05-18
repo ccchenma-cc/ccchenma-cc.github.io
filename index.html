@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,144,700..900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,144,700..900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -27,6 +27,7 @@
       <nav aria-label="Primary navigation">
         <a href="#timeline">Timeline</a>
         <a href="#work">Work</a>
+        <a href="#side-projects">Geek Space</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -38,9 +39,9 @@
 
     <main id="top">
       <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-card">
+        <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Hey, I'm</p>
+            <p class="hero-greeting">Hey, I'm <em>Chen</em></p>
             <h1 id="hero-title" class="display-italic">
               <span>Hello,</span>
               <span>I'm <em>Chen</em></span>
@@ -66,130 +67,292 @@
           <div class="hero-visual" aria-label="Portrait of Ma Chen">
             <div class="portrait-frame">
               <img src="assets/profile.jpg" alt="马琛的个人照片" />
-              <div class="portrait-tag tag-top">Multilingual AI PM</div>
-              <div class="portrait-tag tag-bottom">Agent Workflow Designer</div>
             </div>
-            <div class="orbit-panel">
-              <p>Spanish · English · Chinese</p>
-              <strong>Global AI Product Atlas</strong>
+            <div class="photo-status">
+              <span class="dot"></span>
+              <span data-en="Trilingual · ZH / EN / ES">中 · 英 · 西 三语</span>
             </div>
           </div>
-
-          <aside class="hero-metrics" aria-label="Profile highlights">
-            <div>
-              <p class="metric-index">#01</p>
-              <span>30+</span>
-              <p>User Interviews</p>
-            </div>
-            <div>
-              <p class="metric-index">#02</p>
-              <span>12K+</span>
-              <p>UGC Samples</p>
-            </div>
-            <div>
-              <p class="metric-index">#03</p>
-              <span>25%</span>
-              <p>Spanish AI Buddy MAU</p>
-            </div>
-          </aside>
         </div>
+
+        <aside class="hero-metrics" aria-label="Profile highlights">
+          <div>
+            <p class="metric-index">#01</p>
+            <span>30+</span>
+            <p data-en="User Interviews">User Interviews</p>
+          </div>
+          <div>
+            <p class="metric-index">#02</p>
+            <span>12K+</span>
+            <p data-en="UGC Samples">UGC Samples</p>
+          </div>
+          <div>
+            <p class="metric-index">#03</p>
+            <span>25%</span>
+            <p data-en="Spanish AI Buddy MAU">Spanish AI Buddy MAU</p>
+          </div>
+        </aside>
       </section>
 
       <section id="timeline" class="section-shell timeline-section" aria-labelledby="timeline-title">
-        <div class="section-heading">
-          <p class="eyebrow">Trajectory</p>
-          <h2 id="timeline-title" data-en="From Language to AI Products">从语言现场到 AI 产品落地</h2>
-          <p data-en="Not a linear job list — a slowly forming product route through language, culture, data, and AI tooling.">
-            你的经历不是线性的职位列表，而是一条逐渐形成的产品航线：语言、文化、数据、AI 工具链。
+        <div class="section-heading section-heading-center">
+          <p class="eyebrow">/ Trajectory</p>
+          <h2 id="timeline-title" class="display-serif">
+            从 <em>Language</em> 到 <em>AI Products</em>
+          </h2>
+          <p class="section-sub" data-en="Not a linear job list — a slowly forming product route through language, culture, data, and AI tooling.">
+            不是线性的职位列表，而是一条逐渐形成的产品航线：语言、文化、数据、AI 工具链。
           </p>
         </div>
 
         <div class="timeline">
           <article class="timeline-item">
-            <time>2020 - 2024</time>
-            <h3 data-en="Spanish BA & Madrid Exchange">西班牙语本科与交换学习</h3>
-            <p data-en="Spanish major at Lanzhou Jiaotong University, then exchange at Universidad Complutense de Madrid — built foundations in Spanish language, literary narrative, and cross-cultural understanding.">兰州交通大学西班牙语专业，后赴马德里康普顿斯大学交换，建立西语语言、文学叙事与跨文化理解基础。</p>
+            <time>2026.04 — Now</time>
+            <h3 data-en="AI-Native Creative Experiments">AI 原生创意产品实验</h3>
+            <p data-en="Solo-designed a pixel-alien desktop pet planet — validating the single-person product loop with RAG, character knowledge bases, and AI generation.">独立设计像素外星人桌面宠物星球，用 RAG、角色知识库和 AI 生成内容验证单人产品开发链路。</p>
           </article>
           <article class="timeline-item">
-            <time>2024 - 2025</time>
-            <h3 data-en="Digital Humanities MA, Universitat de Barcelona">巴塞罗那大学数字人文硕士</h3>
-            <p data-en="Focused on multilingual corpora, data visualization, semantic web, and XML. Delivered a 15,000+ word corpus analysis with top thesis grade.">聚焦多语言语料库、数据可视化、语义网与 XML，完成 15,000+ 词语料库分析报告并获优秀论文评级。</p>
-          </article>
-          <article class="timeline-item">
-            <time>2024.06 - 2025.01</time>
-            <h3 data-en="Content Safety Review · LATAM UGC">内容安全评测 / 拉美 UGC 场景</h3>
-            <p data-en="Processed 12,000+ UGC samples, distilling violation cases, edge samples, and LATAM cultural nuances into an explainable evaluation framework.">处理 12,000+ 条 UGC 样本，沉淀违规 case、边界样本与拉美文化敏感点，搭建可解释评测体系。</p>
-          </article>
-          <article class="timeline-item">
-            <time>2025.10 - 2026.04</time>
+            <time>2025.10 — 2026.04</time>
             <h3 data-en="HelloTalk AI Spanish Companion">HelloTalk AI 西语语伴</h3>
             <p data-en="Led the 0→1 launch of the Spanish AI companion. From 30+ in-depth interviews, defined personas, scenario library, prompt framework, and phased rollout.">主导西语 AI 语伴从 0 到 1，基于 30+ 深访定义用户画像、场景库、Prompt 框架与上线灰度节奏。</p>
           </article>
           <article class="timeline-item">
-            <time>2026.04 - Now</time>
-            <h3 data-en="AI-Native Creative Experiments">AI 原生创意产品实验</h3>
-            <p data-en="Solo-designed a pixel-alien desktop pet planet — validating the single-person product loop with RAG, character knowledge bases, and AI generation.">独立设计像素外星人桌面宠物星球，用 RAG、角色知识库和 AI 生成内容验证单人产品开发链路。</p>
+            <time>2024.06 — 2025.01</time>
+            <h3 data-en="Content Safety Review · LATAM UGC">内容安全评测 / 拉美 UGC 场景</h3>
+            <p data-en="Processed 12,000+ UGC samples, distilling violation cases, edge samples, and LATAM cultural nuances into an explainable evaluation framework.">处理 12,000+ 条 UGC 样本，沉淀违规 case、边界样本与拉美文化敏感点，搭建可解释评测体系。</p>
+          </article>
+          <article class="timeline-item">
+            <time>2024 — 2025</time>
+            <h3 data-en="Digital Humanities MA, Universitat de Barcelona">巴塞罗那大学数字人文硕士</h3>
+            <p data-en="Focused on multilingual corpora, data visualization, semantic web, and XML. Delivered a 15,000+ word corpus analysis with top thesis grade.">聚焦多语言语料库、数据可视化、语义网与 XML，完成 15,000+ 词语料库分析报告并获优秀论文评级。</p>
+          </article>
+          <article class="timeline-item">
+            <time>2020 — 2024</time>
+            <h3 data-en="Spanish BA & Madrid Exchange">西班牙语本科与交换学习</h3>
+            <p data-en="Spanish major at Lanzhou Jiaotong University, then exchange at Universidad Complutense de Madrid — built foundations in Spanish language, literary narrative, and cross-cultural understanding.">兰州交通大学西班牙语专业，后赴马德里康普顿斯大学交换，建立西语语言、文学叙事与跨文化理解基础。</p>
           </article>
         </div>
       </section>
 
       <section id="work" class="section-shell work-section" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Missions</p>
-          <h2 id="work-title" data-en="Selected Projects">重点项目档案</h2>
-          <p data-en="Each project follows a Problem → Method → Result structure, highlighting product judgment and delivery.">每个项目都用「问题 - 方法 - 结果」的结构呈现，突出你作为 AI PM 的判断和交付能力。</p>
+        <div class="section-heading section-heading-center">
+          <p class="eyebrow">/ Selected Missions</p>
+          <h2 id="work-title" class="display-serif">
+            精选 <em>项目</em> &amp; <em>Cases</em>
+          </h2>
+          <p class="section-sub" data-en="Each project follows a Problem → Method → Result structure, highlighting product judgment and delivery.">
+            每个项目都用「问题 → 方法 → 结果」的结构呈现，突出作为 AI PM 的判断与交付能力。
+          </p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-index">01</div>
-            <p class="project-type">AI Language Learning Product</p>
-            <h3 data-en="HelloTalk AI Spanish Companion">HelloTalk AI 西语语伴</h3>
-            <p data-en="Expanded Spanish into a standalone AI companion line — designing scenario-based practice around speaking anxiety, DELE prep, cultural immersion, and micro-sessions.">
-              将西班牙语扩展为 AI 语伴下的独立语种线，围绕开口焦虑、DELE 备考、文化沉浸和碎片练习设计场景化陪练体验。
-            </p>
-            <div class="project-stats">
-              <span data-en="30+ Interviews">30+ 深访</span>
-              <span data-en="4 Personas">4 类用户画像</span>
-              <span data-en="25% MAU">25% MAU 覆盖</span>
+        <div class="project-list">
+          <article class="project-item">
+            <div class="project-info">
+              <span class="proj-tag">/ 01 — AI Language Learning</span>
+              <h3 class="proj-name">
+                HelloTalk AI <em data-en="Spanish Companion">西语语伴</em>
+              </h3>
+              <p class="proj-desc" data-en="Expanded Spanish into a standalone AI companion line — designing scenario-based practice around speaking anxiety, DELE prep, cultural immersion, and micro-sessions.">
+                将西班牙语扩展为 AI 语伴下的独立语种线，围绕开口焦虑、DELE 备考、文化沉浸和碎片练习设计场景化陪练体验。
+              </p>
+              <div class="proj-meta">
+                <div class="proj-meta-item">
+                  <label data-en="User Research">用户研究</label>
+                  <span data-en="30+ in-depth">30+ 深访</span>
+                </div>
+                <div class="proj-meta-item">
+                  <label data-en="Personas">用户画像</label>
+                  <span data-en="4 segments">4 类</span>
+                </div>
+                <div class="proj-meta-item">
+                  <label data-en="MAU Coverage">MAU 覆盖</label>
+                  <span>25%</span>
+                </div>
+                <div class="proj-meta-item">
+                  <label data-en="Positioning">产品定位</label>
+                  <span data-en="Standalone line">独立语种线</span>
+                </div>
+              </div>
+              <div class="proj-btns">
+                <a class="proj-btn-main" href="#" data-en="Project Detail →">查看详情 →</a>
+                <a class="proj-btn-sub" href="#" data-en="PRD Doc">PRD 文档</a>
+              </div>
+            </div>
+            <div class="proj-visual">
+              <div class="visual-header">
+                <span data-en="Key Metric">核心指标</span>
+                <span class="val">25%</span>
+              </div>
+              <div class="visual-big">25<span class="unit">% MAU</span></div>
+              <p class="visual-caption" data-en="Spanish AI Buddy coverage of total MAU within 3 months.">西语 AI 语伴上线 3 个月覆盖月活用户比例。</p>
+              <div class="visual-bars">
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="Interviews">深访量</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:90%"></span></span>
+                  <span class="vbar-val">30+</span>
+                </div>
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="Personas">用户画像</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:60%"></span></span>
+                  <span class="vbar-val">4</span>
+                </div>
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="Scenarios">场景库</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:78%"></span></span>
+                  <span class="vbar-val" data-en="Rich">充足</span>
+                </div>
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="MAU">MAU 覆盖</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:25%"></span></span>
+                  <span class="vbar-val">25%</span>
+                </div>
+              </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-index">02</div>
-            <p class="project-type">AIGC Localization Workflow</p>
-            <h3 data-en="Cross-Language AIGC Workflow">跨语言出海 AIGC 内容生成工作流</h3>
-            <p data-en="A multi-agent pipeline for generation, localization, compliance, and QA — tackling the &ldquo;too standard, not native&rdquo; pain of MT-driven outbound content.">
-              针对「机器翻译太标准、不接地气」的出海内容痛点，设计生成、本地化、合规、质检多 Agent 链路。
+          <article class="project-item">
+            <div class="project-info">
+              <span class="proj-tag">/ 02 — AIGC Localization</span>
+              <h3 class="proj-name">
+                跨语言出海 <em data-en="AIGC Workflow">AIGC 工作流</em>
+              </h3>
+              <p class="proj-desc" data-en="A multi-agent pipeline for generation, localization, compliance, and QA — tackling the &ldquo;too standard, not native&rdquo; pain of MT-driven outbound content.">
+                针对「机器翻译太标准、不接地气」的出海内容痛点，设计生成、本地化、合规、质检多 Agent 链路。
+              </p>
+              <div class="proj-meta">
+                <div class="proj-meta-item">
+                  <label data-en="Languages">语种支持</label>
+                  <span>ZH / EN / ES</span>
+                </div>
+                <div class="proj-meta-item">
+                  <label data-en="Agent Roles">Agent 数</label>
+                  <span data-en="4 agents">4 Agent</span>
+                </div>
+                <div class="proj-meta-item">
+                  <label data-en="Naturalness">自然度提升</label>
+                  <span>+30 – 40%</span>
+                </div>
+                <div class="proj-meta-item">
+                  <label data-en="Coverage">链路覆盖</label>
+                  <span data-en="Gen → QA">生成 → 质检</span>
+                </div>
+              </div>
+              <div class="proj-btns">
+                <a class="proj-btn-main" href="#" data-en="Project Detail →">查看详情 →</a>
+                <a class="proj-btn-sub" href="#" data-en="Flowchart">流程图</a>
+              </div>
+            </div>
+            <div class="proj-visual">
+              <div class="visual-header">
+                <span data-en="Naturalness Gain">自然度对比</span>
+                <span class="val">+30 – 40%</span>
+              </div>
+              <div class="compare-cards">
+                <div class="ccard">
+                  <p class="clabel" data-en="Pure MT">机器翻译</p>
+                  <p class="cval">60</p>
+                </div>
+                <p class="cvs">→</p>
+                <div class="ccard accent">
+                  <p class="clabel" data-en="AIGC Pipeline">AIGC 链路</p>
+                  <p class="cval">90+</p>
+                </div>
+              </div>
+              <div class="cresult">
+                <span data-en="Local Naturalness Lift">本地化自然度提升</span>
+                <span>+30 – 40%</span>
+              </div>
+              <div class="visual-bars">
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="Generation">生成</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:85%"></span></span>
+                  <span class="vbar-val">A1</span>
+                </div>
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="Localization">本地化</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:78%"></span></span>
+                  <span class="vbar-val">A2</span>
+                </div>
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="Compliance">合规</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:70%"></span></span>
+                  <span class="vbar-val">A3</span>
+                </div>
+                <div class="vbar-row">
+                  <span class="vbar-label" data-en="QA Review">质检</span>
+                  <span class="vbar-track"><span class="vbar-fill" style="width:88%"></span></span>
+                  <span class="vbar-val">A4</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="side-projects" class="section-shell side-projects-section" aria-labelledby="side-projects-title">
+        <div class="section-heading section-heading-center">
+          <p class="eyebrow">/ Geek Space</p>
+          <h2 id="side-projects-title" class="display-serif">
+            个人 <em>实验</em> &amp; <em>Side Projects</em>
+          </h2>
+          <p class="section-sub" data-en="Spare-time builds where I validate AI tooling end-to-end, alone.">
+            业余时间独自验证 AI 工具链端到端能力的产品试验场。
+          </p>
+        </div>
+
+        <div class="sp-grid">
+          <article class="sp-card">
+            <div class="sp-card-head">
+              <p class="sp-card-num">/ 01</p>
+              <span class="sp-card-status status-done">
+                <span class="dot-done"></span>
+                <span data-en="Shipped">已上线</span>
+              </span>
+            </div>
+            <h3 class="sp-card-name">
+              像素外星人 <em data-en="Desktop Pet Planet">桌面宠物星球</em>
+            </h3>
+            <p class="sp-card-desc" data-en="Solo-built character design, lore knowledge base, RAG dialogue, and a planet visualization — validating an AI-tool-driven indie product loop.">
+              独立完成角色设定、世界观知识库、RAG 对话逻辑与可视化星球网页，验证 AI 工具链驱动的单人创意产品开发链路。
             </p>
-            <div class="project-stats">
-              <span data-en="ZH / EN / ES">中/英/西</span>
-              <span data-en="4 Agents">4 Agent</span>
-              <span data-en="+30-40% Naturalness">+30%-40% 自然度</span>
+            <div class="sp-card-tags">
+              <span class="sp-tag">RAG</span>
+              <span class="sp-tag" data-en="5 Characters">5 个角色</span>
+              <span class="sp-tag" data-en="Solo 0→1">独立 0→1</span>
+              <span class="sp-tag" data-en="Visualization">可视化</span>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-index">03</div>
-            <p class="project-type">AI Native Creative Product</p>
-            <h3 data-en="Pixel Alien Desktop Pet Planet">像素外星人桌面宠物星球</h3>
-            <p data-en="Solo-built character design, lore knowledge base, RAG dialogue, and a planet visualization — validating an AI-tool-driven indie product loop.">
-              独立完成角色设定、世界观知识库、RAG 对话逻辑与可视化星球网页，验证 AI 工具链驱动的单人创意产品开发。
+          <article class="sp-card sp-card-placeholder">
+            <div class="sp-card-head">
+              <p class="sp-card-num">/ 02</p>
+              <span class="sp-card-status status-building">
+                <span class="dot-building"></span>
+                <span data-en="Coming Soon">即将上线</span>
+              </span>
+            </div>
+            <h3 class="sp-card-name">
+              <em data-en="Coming Soon">敬请期待</em>
+            </h3>
+            <p class="sp-card-desc" data-en="Next personal AI experiment is on the way — stay tuned.">
+              下一个个人 AI 实验项目正在路上，敬请期待。
             </p>
-            <div class="project-stats">
-              <span data-en="5 Characters">5 个角色</span>
-              <span data-en="RAG Lore">RAG 知识库</span>
-              <span data-en="Solo 0→1">独立 0-1</span>
+            <div class="sp-card-tags">
+              <span class="sp-tag" data-en="WIP">筹备中</span>
             </div>
           </article>
         </div>
       </section>
 
       <section id="skills" class="section-shell skills-section" aria-labelledby="skills-title">
-        <div class="section-heading">
-          <p class="eyebrow">Skill Stack</p>
-          <h2 id="skills-title" data-en="Stack & Methods">工具栈与方法</h2>
-          <p data-en="Skill cards show what I use to ship — grouped by direction, switchable.">技能卡片展示「我用什么把产品做出来」，按方向分组、可切换查看。</p>
+        <div class="section-heading section-heading-center">
+          <p class="eyebrow">/ Skill Stack</p>
+          <h2 id="skills-title" class="display-serif">
+            工具栈 &amp; <em>Methods</em>
+          </h2>
+          <p class="section-sub" data-en="Skill cards show what I use to ship — grouped by direction, switchable.">
+            技能卡片展示「我用什么把产品做出来」，按方向分组、可切换查看。
+          </p>
         </div>
 
         <div class="skill-console">
@@ -220,10 +383,12 @@
       </section>
 
       <section id="contact" class="section-shell contact-section" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title" data-en="Let the atlas keep expanding.">保持联系，继续探索。</h2>
-          <p data-en="If you care about AI products, global AIGC, localized content experiences, or creative agent products — find me here.">
+        <div class="section-heading section-heading-center">
+          <p class="eyebrow">/ Contact</p>
+          <h2 id="contact-title" class="display-serif">
+            保持 <em>联系</em> &amp; <em>Stay Connected</em>
+          </h2>
+          <p class="section-sub" data-en="If you care about AI products, global AIGC, localized content experiences, or creative agent products — find me here.">
             如果你关注 AI 产品、出海 AIGC、本地化内容体验或创意型 Agent 产品，可以从这里找到我。
           </p>
         </div>
@@ -234,7 +399,7 @@
           </a>
           <a href="assets/resume.pdf" target="_blank" rel="noreferrer">
             <i data-lucide="download"></i>
-            Download Resume
+            <span data-en="Download Resume">Download Resume</span>
           </a>
           <span class="contact-placeholder" aria-label="Notion portfolio link pending">
             <i data-lucide="notebook-tabs"></i>
