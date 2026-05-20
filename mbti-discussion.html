@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">Ma Chen | AI Product Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="case-page">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html#top"><span class="brand-mark"></span><span>Ma Chen</span></a>
+      <nav aria-label="Case navigation">
+        <a href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
+        <a href="https://mbti-discussion.netlify.app/" target="_blank" rel="noreferrer" data-i18n="case.live">Open live project</a>
+      </nav>
+      <button class="lang-toggle" type="button" aria-label="Switch language">
+        <span data-lang-option="en">EN</span>
+        <span data-lang-option="es">ES</span>
+        <span data-lang-option="zh">中</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="case-hero section-inner reveal">
+        <div>
+          <p class="eyebrow" data-i18n="mbti.kicker">Case study · MBTI Discussion</p>
+          <h1 data-i18n="mbti.title">A cleaner social surface for personality-led conversation.</h1>
+          <p data-i18n="mbti.lead">MBTI Discussion is treated here as a community product: the challenge is to make identity expressive without letting the interface become noisy.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://mbti-discussion.netlify.app/" target="_blank" rel="noreferrer" data-i18n="case.live">Open live project</a>
+            <a class="button button-secondary" href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-body section-inner">
+        <div class="case-grid">
+          <aside class="case-sidebar reveal">
+            <a href="#overview" data-i18n="case.overview">Overview</a>
+            <a href="#phases" data-i18n="case.phases">Project phases</a>
+            <a href="#architecture" data-i18n="case.architecture">Product architecture</a>
+            <a href="#execution" data-i18n="case.execution">Execution notes</a>
+            <a href="#outcome" data-i18n="case.outcome">Outcome</a>
+          </aside>
+          <div>
+            <section id="overview" class="case-section reveal">
+              <h2 data-i18n="mbti.overviewTitle">Product lens</h2>
+              <p data-i18n="mbti.overviewText">The experience is designed around quick recognition, type-based navigation, and discussion prompts. The interface should help users understand where they belong, what they can contribute, and how to enter a conversation with low friction.</p>
+            </section>
+            <section id="phases" class="case-section reveal">
+              <h2 data-i18n="case.phases">Project phases</h2>
+              <div class="phase-list">
+                <article class="phase-item"><strong>01</strong><div><h3 data-i18n="mbti.phase1Title">Research the conversation model</h3><p data-i18n="mbti.phase1Text">Identify what users expect from MBTI communities: self-expression, comparison, debate, and lightweight discovery.</p></div></article>
+                <article class="phase-item"><strong>02</strong><div><h3 data-i18n="mbti.phase2Title">Define the product structure</h3><p data-i18n="mbti.phase2Text">Organize entry points around types, discussion topics, and community actions instead of a flat feed.</p></div></article>
+                <article class="phase-item"><strong>03</strong><div><h3 data-i18n="mbti.phase3Title">Design the interaction tone</h3><p data-i18n="mbti.phase3Text">Use personality labels as visual anchors while keeping the interface minimal, readable, and discussion-first.</p></div></article>
+                <article class="phase-item"><strong>04</strong><div><h3 data-i18n="mbti.phase4Title">Package the case</h3><p data-i18n="mbti.phase4Text">Present the project as a social product with clear feature logic, not just a visual experiment.</p></div></article>
+              </div>
+            </section>
+            <section id="architecture" class="case-section reveal">
+              <h2 data-i18n="mbti.architectureTitle">Product architecture</h2>
+              <p data-i18n="mbti.architectureText">The product is structured around three layers: personality discovery, discussion contexts, and lightweight community actions. This makes the user journey more intentional than a simple feed and gives the product a stronger reason to exist.</p>
+            </section>
+            <section id="execution" class="case-section reveal">
+              <h2 data-i18n="mbti.executionTitle">Execution notes</h2>
+              <p data-i18n="mbti.executionText">The system uses strong typographic hierarchy, compact personality cues, and visual rhythm to keep a discussion product from feeling like a generic forum. The design direction favors clear category structures, expressive type badges, and short paths to participation.</p>
+            </section>
+            <section id="outcome" class="case-section reveal">
+              <h2 data-i18n="mbti.outcomeTitle">Outcome</h2>
+              <p data-i18n="mbti.outcomeText">A more premium, productized framing for a social discussion project: less template-like, more intentional, and easier to present as a complete product case.</p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

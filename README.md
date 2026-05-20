@@ -1,26 +1,33 @@
-# Chen — AI PM Portfolio
+# Chen — AI Product Portfolio
 
-个人作品集网站 / Personal portfolio for an AI Product Manager working across AIGC globalization, multilingual localization, and agent workflows.
+Professional portfolio for an AI Product Manager working across AIGC globalization, multilingual localization, user research, and agent-style workflows.
 
-🌐 **Live**: https://ccchenma-cc.github.io/chen-aipm-portfolio/
+Live project links featured in the portfolio:
+
+- MBTI Discussion: https://mbti-discussion.netlify.app/
+- Lumi Galaxy: https://lumigalaxy.github.io/
+- AI Workflow GC: https://aiworkflow-cc.github.io/
 
 ## Stack
 
-- Vanilla HTML / CSS / JS — no framework
-- [Fraunces](https://fonts.google.com/specimen/Fraunces) variable italic for the artistic display headline
-- [Inter](https://fonts.google.com/specimen/Inter) for UI text, [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC) for Chinese
-- [Lucide](https://lucide.dev/) icons
+- Vanilla HTML / CSS / JS
+- Responsive editorial layout with full-screen project chapters
+- Explicit English / Chinese i18n dictionary in `script.js`
+- Dedicated case-study pages for each featured project
+- Local assets in `assets/`
 
-## Features
+## Pages
 
-- Dark editorial layout with warm-orange accent system
-- One-click 中 / EN bilingual toggle (state persisted in `localStorage`)
-- Skill stack with tabbed categories (AI / Product / Data / Language / Tools)
-- Fully responsive — desktop, tablet, mobile
+- `index.html` — main portfolio experience
+- `mbti-discussion.html` — MBTI Discussion project case study
+- `lumigalaxy.html` — Lumi Galaxy project case study
+- `ai-workflow-gc.html` — AI Workflow GC marketing workflow case study
 
 ## Development
 
-Just open `index.html` in a browser, or run a local server:
+Open `index.html` directly in a browser. No build step is required.
+
+If you prefer a local server:
 
 ```bash
 npx serve .
@@ -28,6 +35,4 @@ npx serve .
 
 ## Version
 
-Current: **v1.1**
-
-Previous snapshot lives in a sibling folder `个站_v1.0/` (outside this repo).
+Current: **v1.4**
