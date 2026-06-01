@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="meta.title">Ma Chen | AI Product Portfolio</title>
+    <meta name="description" content="MindPalace / MBTI Discussion case study by Ma Chen: a multi-agent reflection table for emotion and relationship topics." data-i18n-attr="content:mbti.metaDescription" />
+    <title data-i18n="mbti.metaTitle">MindPalace MBTI Discussion | Ma Chen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,11 +21,11 @@
         <a href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
         <a href="https://mbti-discussion.netlify.app/" target="_blank" rel="noreferrer" data-i18n="case.live">Open live project</a>
       </nav>
-      <button class="lang-toggle" type="button" aria-label="Switch language">
-        <span data-lang-option="en">EN</span>
-        <span data-lang-option="es">ES</span>
-        <span data-lang-option="zh">中</span>
-      </button>
+      <div class="lang-toggle" role="group" aria-label="Switch language">
+        <button type="button" data-lang-option="en">EN</button>
+        <button type="button" data-lang-option="es">ES</button>
+        <button type="button" data-lang-option="zh">中</button>
+      </div>
     </header>
 
     <main>
@@ -44,15 +45,27 @@
         <div class="case-grid">
           <aside class="case-sidebar reveal">
             <a href="#overview" data-i18n="case.overview">Overview</a>
-            <a href="#phases" data-i18n="case.phases">Project phases</a>
-            <a href="#architecture" data-i18n="case.architecture">Product architecture</a>
-            <a href="#execution" data-i18n="case.execution">Execution notes</a>
+            <a href="#role" data-i18n="case.role">My role</a>
+            <a href="#decisions" data-i18n="case.decisions">Key decisions</a>
             <a href="#outcome" data-i18n="case.outcome">Outcome</a>
+            <a href="#phases" data-i18n="case.phases">Project phases</a>
           </aside>
           <div>
             <section id="overview" class="case-section reveal">
               <h2 data-i18n="mbti.overviewTitle">Product lens</h2>
               <p data-i18n="mbti.overviewText">The experience is designed around quick recognition, type-based navigation, and discussion prompts. The interface should help users understand where they belong, what they can contribute, and how to enter a conversation with low friction.</p>
+            </section>
+            <section id="role" class="case-section reveal">
+              <h2 data-i18n="case.role">My role</h2>
+              <p data-i18n="mbti.roleText">I owned the product definition and delivery path: PRD, user flow, technical architecture, design rules, operations runbook, AI agent setup, front-end implementation, database connection, and Netlify deployment.</p>
+            </section>
+            <section id="decisions" class="case-section reveal">
+              <h2 data-i18n="case.decisions">Key decisions</h2>
+              <div class="insight-list">
+                <p data-i18n="mbti.decision1">Defined the core scenario as a multi-perspective emotional reflection tool: users enter an emotion or relationship topic and receive independent responses from NT, NF, SJ, and SP thinking dimensions.</p>
+                <p data-i18n="mbti.decision2">Designed a two-round discussion mechanism: the first round lets four agents respond independently, while the second round asks them to supplement and challenge each other based on the user's question and the first responses.</p>
+                <p data-i18n="mbti.decision3">Used Claude Code / Cursor to turn product documents into a working web app with Next.js, TypeScript, Tailwind, API routes, Prisma, Supabase, DeepSeek API calls, and streamed output.</p>
+              </div>
             </section>
             <section id="phases" class="case-section reveal">
               <h2 data-i18n="case.phases">Project phases</h2>
@@ -62,14 +75,6 @@
                 <article class="phase-item"><strong>03</strong><div><h3 data-i18n="mbti.phase3Title">Design the interaction tone</h3><p data-i18n="mbti.phase3Text">Use personality labels as visual anchors while keeping the interface minimal, readable, and discussion-first.</p></div></article>
                 <article class="phase-item"><strong>04</strong><div><h3 data-i18n="mbti.phase4Title">Package the case</h3><p data-i18n="mbti.phase4Text">Present the project as a social product with clear feature logic, not just a visual experiment.</p></div></article>
               </div>
-            </section>
-            <section id="architecture" class="case-section reveal">
-              <h2 data-i18n="mbti.architectureTitle">Product architecture</h2>
-              <p data-i18n="mbti.architectureText">The product is structured around three layers: personality discovery, discussion contexts, and lightweight community actions. This makes the user journey more intentional than a simple feed and gives the product a stronger reason to exist.</p>
-            </section>
-            <section id="execution" class="case-section reveal">
-              <h2 data-i18n="mbti.executionTitle">Execution notes</h2>
-              <p data-i18n="mbti.executionText">The system uses strong typographic hierarchy, compact personality cues, and visual rhythm to keep a discussion product from feeling like a generic forum. The design direction favors clear category structures, expressive type badges, and short paths to participation.</p>
             </section>
             <section id="outcome" class="case-section reveal">
               <h2 data-i18n="mbti.outcomeTitle">Outcome</h2>

@@ -1,12 +1,12 @@
 # Chen — AI Product Portfolio
 
-Professional portfolio for an AI Product Manager working across AIGC globalization, multilingual localization, user research, and agent-style workflows.
+Professional portfolio for an AI Product Manager working across AI language companions, multilingual localization, user research, and agent-style workflows.
 
 Live project links featured in the portfolio:
 
 - MBTI Discussion: https://mbti-discussion.netlify.app/
 - Lumi Galaxy: https://lumigalaxy.github.io/
-- AI Workflow GC: https://aiworkflow-cc.github.io/
+- AI Language Companion - Spanish Model
 
 ## Stack
 
@@ -21,7 +21,7 @@ Live project links featured in the portfolio:
 - `index.html` — main portfolio experience
 - `mbti-discussion.html` — MBTI Discussion project case study
 - `lumigalaxy.html` — Lumi Galaxy project case study
-- `ai-workflow-gc.html` — AI Workflow GC marketing workflow case study
+- `ai-workflow-gc.html` — AI Language Companion - Spanish Model case study shell
 
 ## Development
 

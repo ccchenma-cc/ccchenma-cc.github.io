@@ -54,6 +54,12 @@ button {
   font: inherit;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(25, 55, 255, 0.48);
+  outline-offset: 3px;
+}
+
 .grain {
   position: fixed;
   inset: 0;
@@ -140,20 +146,23 @@ button {
   cursor: pointer;
 }
 
-.lang-toggle span {
+.lang-toggle button {
   display: grid;
   place-items: center;
   min-width: 36px;
   height: 30px;
+  border: 0;
   border-radius: 999px;
+  background: transparent;
   color: var(--muted);
   font-size: 0.75rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
-html[data-lang="en"] [data-lang-option="en"],
-html[data-lang="es"] [data-lang-option="es"],
-html[data-lang="zh"] [data-lang-option="zh"] {
+html[data-lang="en"] .lang-toggle [data-lang-option="en"],
+html[data-lang="es"] .lang-toggle [data-lang-option="es"],
+html[data-lang="zh"] .lang-toggle [data-lang-option="zh"] {
   background: var(--ink);
   color: var(--paper);
 }
@@ -198,6 +207,18 @@ html[data-lang="zh"] [data-lang-option="zh"] {
 .hero h1 span:last-child {
   color: transparent;
   -webkit-text-stroke: 1.4px var(--ink);
+}
+
+html[data-lang="en"] .hero h1,
+html[data-lang="es"] .hero h1 {
+  max-width: 1120px;
+  font-size: clamp(2.7rem, 5.3vw, 5.7rem);
+}
+
+html[data-lang="en"] .case-hero h1,
+html[data-lang="es"] .case-hero h1 {
+  max-width: 980px;
+  font-size: clamp(2.7rem, 5.4vw, 5.8rem);
 }
 
 .hero-lead {
@@ -905,6 +926,20 @@ html[data-lang="zh"] [data-lang-option="zh"] {
   line-height: 1.85;
 }
 
+.insight-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.insight-list p {
+  margin-top: 0;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 253, 248, 0.68);
+}
+
 .phase-list {
   display: grid;
   gap: 12px;
@@ -991,6 +1026,14 @@ html[data-lang="zh"] [data-lang-option="zh"] {
   .case-hero h1 {
     font-size: clamp(2.7rem, 14vw, 4.4rem);
     line-height: 0.98;
+  }
+
+  html[data-lang="en"] .hero h1,
+  html[data-lang="es"] .hero h1,
+  html[data-lang="en"] .case-hero h1,
+  html[data-lang="es"] .case-hero h1 {
+    font-size: clamp(1.35rem, 5.4vw, 1.8rem);
+    line-height: 1.02;
   }
 
   .hero-grid {
