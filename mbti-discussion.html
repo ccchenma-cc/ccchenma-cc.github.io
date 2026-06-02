@@ -29,9 +29,10 @@
     </header>
 
     <main>
-      <section class="case-hero section-inner reveal">
-        <div>
+      <section class="case-hero case-hero-with-art section-inner reveal">
+        <div class="case-hero-copy">
           <p class="eyebrow" data-i18n="mbti.kicker">Case study · MBTI Discussion</p>
+          <p class="case-date" data-i18n="mbti.date">2026.04 - Present</p>
           <h1 data-i18n="mbti.title">A cleaner social surface for personality-led conversation.</h1>
           <p data-i18n="mbti.lead">MBTI Discussion is treated here as a community product: the challenge is to make identity expressive without letting the interface become noisy.</p>
           <div class="hero-actions">
@@ -39,32 +40,40 @@
             <a class="button button-secondary" href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
           </div>
         </div>
+        <figure class="case-hero-art">
+          <img class="case-hero-art-image" src="assets/mbti-characters-cutout.png" alt="" onerror="this.closest('.case-hero-art').hidden = true">
+        </figure>
       </section>
 
       <section class="case-body section-inner">
         <div class="case-grid">
           <aside class="case-sidebar reveal">
             <a href="#overview" data-i18n="case.overview">Overview</a>
-            <a href="#role" data-i18n="case.role">My role</a>
-            <a href="#decisions" data-i18n="case.decisions">Key decisions</a>
-            <a href="#outcome" data-i18n="case.outcome">Outcome</a>
             <a href="#phases" data-i18n="case.phases">Project phases</a>
+            <a href="#architecture" data-i18n="case.architecture">Product architecture</a>
+            <a href="#execution" data-i18n="case.execution">Execution notes</a>
+            <a href="#outcome" data-i18n="case.outcome">Outcome</a>
           </aside>
           <div>
             <section id="overview" class="case-section reveal">
               <h2 data-i18n="mbti.overviewTitle">Product lens</h2>
               <p data-i18n="mbti.overviewText">The experience is designed around quick recognition, type-based navigation, and discussion prompts. The interface should help users understand where they belong, what they can contribute, and how to enter a conversation with low friction.</p>
-            </section>
-            <section id="role" class="case-section reveal">
-              <h2 data-i18n="case.role">My role</h2>
-              <p data-i18n="mbti.roleText">I owned the product definition and delivery path: PRD, user flow, technical architecture, design rules, operations runbook, AI agent setup, front-end implementation, database connection, and Netlify deployment.</p>
-            </section>
-            <section id="decisions" class="case-section reveal">
-              <h2 data-i18n="case.decisions">Key decisions</h2>
-              <div class="insight-list">
-                <p data-i18n="mbti.decision1">Defined the core scenario as a multi-perspective emotional reflection tool: users enter an emotion or relationship topic and receive independent responses from NT, NF, SJ, and SP thinking dimensions.</p>
-                <p data-i18n="mbti.decision2">Designed a two-round discussion mechanism: the first round lets four agents respond independently, while the second round asks them to supplement and challenge each other based on the user's question and the first responses.</p>
-                <p data-i18n="mbti.decision3">Used Claude Code / Cursor to turn product documents into a working web app with Next.js, TypeScript, Tailwind, API routes, Prisma, Supabase, DeepSeek API calls, and streamed output.</p>
+              <div class="case-card-grid">
+                <article class="case-mini-card">
+                  <span data-i18n="mbti.motiveLabel">Starting point</span>
+                  <h3 data-i18n="mbti.motiveTitle">I kept hearing one kind of answer.</h3>
+                  <p data-i18n="mbti.motiveText">As an NF user, I knew how easy it was to seek empathy and miss colder, faster, or more action-oriented perspectives.</p>
+                </article>
+                <article class="case-mini-card">
+                  <span data-i18n="mbti.needLabel">User need</span>
+                  <h3 data-i18n="mbti.needTitle">People want response styles, not just answers.</h3>
+                  <p data-i18n="mbti.needText">Interviews showed that users care whether AI sounds understanding, practical, non-judgmental, or able to reveal a blind spot.</p>
+                </article>
+                <article class="case-mini-card">
+                  <span data-i18n="mbti.validationLabel">Early signal</span>
+                  <h3 data-i18n="mbti.validationTitle">3 of 4 testers felt clearer.</h3>
+                  <p data-i18n="mbti.validationText">The strongest surprise was SP: direct, action-first responses helped users get unstuck.</p>
+                </article>
               </div>
             </section>
             <section id="phases" class="case-section reveal">
@@ -76,9 +85,47 @@
                 <article class="phase-item"><strong>04</strong><div><h3 data-i18n="mbti.phase4Title">Package the case</h3><p data-i18n="mbti.phase4Text">Present the project as a social product with clear feature logic, not just a visual experiment.</p></div></article>
               </div>
             </section>
+            <section id="architecture" class="case-section reveal">
+              <h2 data-i18n="mbti.architectureTitle">Product architecture</h2>
+              <p data-i18n="mbti.architectureText">The product is structured around three layers: personality discovery, discussion contexts, and lightweight community actions. This makes the user journey more intentional than a simple feed and gives the product a stronger reason to exist.</p>
+              <div class="agent-flow" aria-label="MBTI agent discussion flow">
+                <div class="agent-node nt"><strong>NT</strong><span data-i18n="mbti.agentNt">Rational analysis</span></div>
+                <div class="agent-node nf"><strong>NF</strong><span data-i18n="mbti.agentNf">Emotional resonance</span></div>
+                <div class="agent-node sj"><strong>SJ</strong><span data-i18n="mbti.agentSj">Reality check</span></div>
+                <div class="agent-node sp"><strong>SP</strong><span data-i18n="mbti.agentSp">Action instinct</span></div>
+                <div class="flow-step"><span data-i18n="mbti.flow1">User topic</span></div>
+                <div class="flow-step"><span data-i18n="mbti.flow2">Independent first round</span></div>
+                <div class="flow-step"><span data-i18n="mbti.flow3">Context-visible debate</span></div>
+                <div class="flow-step"><span data-i18n="mbti.flow4">Full timeline</span></div>
+              </div>
+            </section>
+            <section id="execution" class="case-section reveal">
+              <h2 data-i18n="mbti.executionTitle">Execution notes</h2>
+              <p data-i18n="mbti.executionText">The system uses strong typographic hierarchy, compact personality cues, and visual rhythm to keep a discussion product from feeling like a generic forum. The design direction favors clear category structures, expressive type badges, and short paths to participation.</p>
+              <div class="tool-stack">
+                <span>Claude Code</span>
+                <span>DeepSeek API</span>
+                <span>Next.js 15</span>
+                <span>TypeScript</span>
+                <span>Tailwind 4</span>
+                <span>Prisma</span>
+                <span>Supabase</span>
+                <span>Netlify</span>
+              </div>
+              <div class="case-split-note">
+                <p data-i18n="mbti.aiBuildText">AI handled the engineering surface: components, API routes, database schema, deployment config.</p>
+                <p data-i18n="mbti.myJudgmentText">I kept the product judgment: what should exist, where the boundary is, how each agent should sound, and when an iteration felt wrong.</p>
+              </div>
+            </section>
             <section id="outcome" class="case-section reveal">
               <h2 data-i18n="mbti.outcomeTitle">Outcome</h2>
               <p data-i18n="mbti.outcomeText">A more premium, productized framing for a social discussion project: less template-like, more intentional, and easier to present as a complete product case.</p>
+              <div class="metric-strip">
+                <div><strong>3</strong><span data-i18n="mbti.metricInterviews">research interviews</span></div>
+                <div><strong>4</strong><span data-i18n="mbti.metricTests">product tests</span></div>
+                <div><strong>3/4</strong><span data-i18n="mbti.metricClarity">felt clearer or firmer</span></div>
+                <div><strong>SP</strong><span data-i18n="mbti.metricSurprise">most surprising view</span></div>
+              </div>
             </section>
           </div>
         </div>

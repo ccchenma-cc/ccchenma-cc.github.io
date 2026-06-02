@@ -492,6 +492,12 @@ html[data-lang="es"] .case-hero h1 {
   line-height: 1.8;
 }
 
+html[data-lang="zh"] .projects-intro p:not(.eyebrow) {
+  max-width: 1120px;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 .project-chapter {
   position: relative;
   min-height: 100svh;
@@ -855,6 +861,66 @@ html[data-lang="es"] .case-hero h1 {
   padding: 96px 0 42px;
 }
 
+.case-hero-with-art {
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.5fr);
+  gap: clamp(30px, 4.8vw, 72px);
+}
+
+.case-hero-copy {
+  min-width: 0;
+}
+
+.lumi-hero.section-inner {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-height: 100svh;
+  padding:
+    104px max(24px, calc((100vw - 1180px) / 2))
+    48px;
+  grid-template-columns: 1fr;
+  place-items: center;
+  overflow: hidden;
+  text-align: center;
+  isolation: isolate;
+}
+
+.lumi-hero .case-hero-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.lumi-hero .case-hero-copy h1,
+.lumi-hero .case-hero-copy p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lumi-hero .hero-actions {
+  justify-content: center;
+}
+
+.lumi-hero::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 1;
+  height: min(34vh, 320px);
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(247, 244, 238, 0),
+    rgba(247, 244, 238, 0.72) 58%,
+    var(--bg) 100%
+  );
+  pointer-events: none;
+}
+
 .case-hero h1 {
   max-width: 1020px;
   margin-top: 18px;
@@ -871,14 +937,95 @@ html[data-lang="es"] .case-hero h1 {
   line-height: 1.85;
 }
 
+.case-date {
+  margin-top: 14px;
+  color: var(--accent-dark);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.case-hero-art {
+  justify-self: end;
+  width: min(100%, 520px);
+  margin: 0;
+  isolation: isolate;
+}
+
+.case-hero-art-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(80svh, 820px);
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(1) contrast(1.02);
+}
+
+.lumi-cover-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.lumi-cover-frame {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, 0.82), rgba(255, 253, 248, 0.64) 44%, rgba(255, 253, 248, 0.5)),
+    url("assets/lumi-orbit-map-landscape.jpg") center center / 1066px 600px repeat,
+    var(--paper);
+  box-shadow: none;
+}
+
+.lumi-cover-frame::before,
+.lumi-cover-frame::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.lumi-cover-frame::before {
+  inset: 0;
+  z-index: 4;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 253, 248, 0.36), transparent 30rem),
+    linear-gradient(180deg, rgba(255, 253, 248, 0.1), rgba(255, 253, 248, 0.56));
+  mix-blend-mode: multiply;
+}
+
+.lumi-cover-frame::after {
+  display: none;
+}
+
 .case-body {
+  position: relative;
   padding: 90px 0 130px;
+}
+
+.case-body::before {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: 280px;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(247, 244, 238, 0.28), var(--bg) 82%),
+    url("assets/lumi-orbit-map-landscape.jpg") center -150px / 1066px 600px repeat;
+  opacity: 0.09;
+  pointer-events: none;
 }
 
 .case-grid {
   display: grid;
-  grid-template-columns: 0.58fr 1fr;
-  gap: 56px;
+  grid-template-columns: minmax(168px, 236px) minmax(0, 1fr);
+  gap: clamp(34px, 4.6vw, 54px);
 }
 
 .case-sidebar {
@@ -886,17 +1033,17 @@ html[data-lang="es"] .case-hero h1 {
   top: 104px;
   align-self: start;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .case-sidebar a {
   display: block;
-  padding: 14px 16px;
+  padding: 11px 13px;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 14px;
   background: rgba(255, 253, 248, 0.64);
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 800;
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -926,6 +1073,50 @@ html[data-lang="es"] .case-hero h1 {
   line-height: 1.85;
 }
 
+/* v2.1 polish: keep non-hero titles compact and easier to scan. */
+.split-heading h2,
+.contact h2 {
+  font-size: clamp(1.9rem, 3.5vw, 3.7rem);
+  line-height: 1.08;
+}
+
+.projects-intro h2 {
+  max-width: 1040px;
+  font-size: clamp(2rem, 4.1vw, 4.4rem);
+  line-height: 1.06;
+}
+
+.project-content h3 {
+  font-size: clamp(2.7rem, 5.6vw, 5.8rem);
+  line-height: 0.98;
+}
+
+.case-hero h1 {
+  max-width: 940px;
+  font-size: clamp(2.25rem, 4.7vw, 4.9rem);
+  line-height: 1.04;
+}
+
+html[data-lang="en"] .case-hero h1,
+html[data-lang="es"] .case-hero h1 {
+  font-size: clamp(2.1rem, 4.2vw, 4.35rem);
+}
+
+.case-section h2 {
+  font-size: clamp(1.65rem, 2.7vw, 2.55rem);
+  line-height: 1.12;
+}
+
+html[data-lang="zh"] .split-heading h2,
+html[data-lang="zh"] .projects-intro h2,
+html[data-lang="zh"] .project-content h3,
+html[data-lang="zh"] .case-hero h1,
+html[data-lang="zh"] .case-section h2,
+html[data-lang="zh"] .contact h2 {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 .insight-list {
   display: grid;
   gap: 12px;
@@ -938,6 +1129,160 @@ html[data-lang="es"] .case-hero h1 {
   border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(255, 253, 248, 0.68);
+}
+
+.case-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.case-mini-card {
+  min-height: 220px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 253, 248, 0.72);
+  box-shadow: 0 14px 34px rgba(28, 24, 18, 0.06);
+}
+
+.case-mini-card span {
+  color: var(--accent-dark);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-mini-card h3 {
+  margin-top: 30px;
+  font-size: 1.18rem;
+  line-height: 1.22;
+}
+
+.case-mini-card p {
+  margin-top: 12px;
+  font-size: 0.94rem;
+  line-height: 1.68;
+}
+
+.agent-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(90deg, rgba(20, 20, 20, 0.045) 1px, transparent 1px) 0 0 / 44px 44px,
+    rgba(255, 253, 248, 0.62);
+}
+
+.agent-node,
+.flow-step {
+  min-height: 92px;
+  padding: 16px;
+  border: 1px solid rgba(20, 20, 20, 0.14);
+  border-radius: 20px;
+  background: rgba(255, 253, 248, 0.76);
+}
+
+.agent-node strong {
+  display: block;
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.agent-node span,
+.flow-step span {
+  display: block;
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.agent-node.nt { box-shadow: inset 0 0 0 3px rgba(25, 55, 255, 0.08); }
+.agent-node.nf { box-shadow: inset 0 0 0 3px rgba(232, 75, 44, 0.1); }
+.agent-node.sj { box-shadow: inset 0 0 0 3px rgba(46, 125, 91, 0.1); }
+.agent-node.sp { box-shadow: inset 0 0 0 3px rgba(108, 73, 216, 0.1); }
+
+.flow-step {
+  min-height: 64px;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 20, 20, 0.88);
+}
+
+.flow-step span {
+  margin: 0;
+  color: var(--paper);
+  text-align: center;
+}
+
+.tool-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.tool-stack span {
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.72);
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.case-split-note {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.case-split-note p {
+  margin-top: 0;
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.68);
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.metric-strip div {
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.metric-strip strong {
+  display: block;
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.metric-strip span {
+  display: block;
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .phase-list {
@@ -978,6 +1323,7 @@ html[data-lang="es"] .case-hero h1 {
   .hero-grid,
   .about-grid,
   .split-heading,
+  .case-hero-with-art,
   .case-grid {
     grid-template-columns: 1fr;
   }
@@ -988,6 +1334,16 @@ html[data-lang="es"] .case-hero h1 {
 
   .experience-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-card-grid,
+  .case-split-note,
+  .metric-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-content {
@@ -1005,6 +1361,17 @@ html[data-lang="es"] .case-hero h1 {
   .case-sidebar {
     position: static;
   }
+
+  .case-hero-art {
+    justify-self: start;
+    width: min(100%, 420px);
+  }
+
+  .lumi-cover-art {
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 @media (max-width: 680px) {
@@ -1017,6 +1384,19 @@ html[data-lang="es"] .case-hero h1 {
     height: 54px;
   }
 
+  .case-hero-with-art {
+    padding-top: 104px;
+  }
+
+  .case-hero-art {
+    width: 100%;
+  }
+
+  .lumi-cover-art {
+    width: 100%;
+    height: 100%;
+  }
+
   .hero {
     padding-top: 104px;
   }
@@ -1024,8 +1404,8 @@ html[data-lang="es"] .case-hero h1 {
   .hero h1,
   .project-content h3,
   .case-hero h1 {
-    font-size: clamp(2.7rem, 14vw, 4.4rem);
-    line-height: 0.98;
+    font-size: clamp(2.05rem, 9.5vw, 3.15rem);
+    line-height: 1.03;
   }
 
   html[data-lang="en"] .hero h1,
@@ -1034,6 +1414,22 @@ html[data-lang="es"] .case-hero h1 {
   html[data-lang="es"] .case-hero h1 {
     font-size: clamp(1.35rem, 5.4vw, 1.8rem);
     line-height: 1.02;
+  }
+
+  .split-heading h2,
+  .projects-intro h2,
+  .contact h2 {
+    font-size: clamp(1.72rem, 8vw, 2.55rem);
+    line-height: 1.12;
+  }
+
+  .case-section h2 {
+    font-size: clamp(1.45rem, 6.8vw, 2rem);
+  }
+
+  .projects-intro p:not(.eyebrow) {
+    max-width: none;
+    font-size: 0.98rem;
   }
 
   .hero-grid {
@@ -1053,6 +1449,15 @@ html[data-lang="es"] .case-hero h1 {
 
   .project-chapter {
     min-height: 100svh;
+  }
+
+  .agent-flow {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .case-mini-card {
+    min-height: auto;
   }
 
   .type-grid {

@@ -29,8 +29,8 @@
     </header>
 
     <main>
-      <section class="case-hero section-inner reveal">
-        <div>
+      <section class="case-hero case-hero-with-art lumi-hero section-inner reveal">
+        <div class="case-hero-copy">
           <p class="eyebrow" data-i18n="lumi.kicker">Case study · Lumi Galaxy</p>
           <h1 data-i18n="lumi.title">A character universe shaped into an AI-native product loop.</h1>
           <p data-i18n="lumi.lead">Lumi Galaxy is a playful web world for pixel-alien desktop pets, combining character design, lore structure, and AI-assisted production.</p>
@@ -39,46 +39,129 @@
             <a class="button button-secondary" href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
           </div>
         </div>
+        <aside class="case-hero-art lumi-cover-art" aria-hidden="true">
+          <div class="lumi-cover-frame"></div>
+        </aside>
       </section>
 
       <section class="case-body section-inner">
         <div class="case-grid">
           <aside class="case-sidebar reveal">
             <a href="#overview" data-i18n="case.overview">Overview</a>
-            <a href="#role" data-i18n="case.role">My role</a>
-            <a href="#decisions" data-i18n="case.decisions">Key decisions</a>
+            <a href="#scope" data-i18n="lumi.navScope">Project scope</a>
+            <a href="#problem" data-i18n="lumi.navProblem">Problem</a>
+            <a href="#strategy" data-i18n="lumi.navStrategy">Product strategy</a>
+            <a href="#characters" data-i18n="lumi.navCharacters">Character system</a>
+            <a href="#workflow" data-i18n="lumi.navWorkflow">AI workflow</a>
+            <a href="#architecture" data-i18n="case.architecture">Product architecture</a>
+            <a href="#roadmap" data-i18n="lumi.navRoadmap">Roadmap</a>
             <a href="#outcome" data-i18n="case.outcome">Outcome</a>
-            <a href="#phases" data-i18n="case.phases">Project phases</a>
           </aside>
           <div>
             <section id="overview" class="case-section reveal">
               <h2 data-i18n="lumi.overviewTitle">Product lens</h2>
               <p data-i18n="lumi.overviewText">The project explores how a tiny fictional universe can become a product system: characters, knowledge, visual identity, interaction loops, and a web presence that makes the world feel tangible.</p>
-            </section>
-            <section id="role" class="case-section reveal">
-              <h2 data-i18n="case.role">My role</h2>
-              <p data-i18n="lumi.roleText">I independently defined and built the product from 0 to 1, including the five alien characters, world setting, interaction experience, feature priority, visual direction, front-end prototype, and iteration plan.</p>
-            </section>
-            <section id="decisions" class="case-section reveal">
-              <h2 data-i18n="case.decisions">Key decisions</h2>
-              <div class="insight-list">
-                <p data-i18n="lumi.decision1">Positioned Lumi Galaxy as an AI-native creative desktop-pet universe rather than a static showcase, giving each character its own personality, story hook, and interaction promise.</p>
-                <p data-i18n="lumi.decision2">Used AI tools to accelerate character background writing, pixel-art asset drafts, dialogue tone, front-end prototyping, and visual iteration while keeping the creative direction coherent.</p>
-                <p data-i18n="lumi.decision3">Compressed the usual art-plus-copy production loop into a solo executable workflow, so product concept, content production, and web launch could move together.</p>
+              <div class="metric-strip">
+                <div><strong>5</strong><span data-i18n="lumi.metricCharacters">pixel-alien companions</span></div>
+                <div><strong>10+</strong><span data-i18n="lumi.metricStates">desktop behavior states</span></div>
+                <div><strong>8</strong><span data-i18n="lumi.metricIntents">dialogue intent categories</span></div>
+                <div><strong>1</strong><span data-i18n="lumi.metricLaunch">live web case</span></div>
               </div>
             </section>
-            <section id="phases" class="case-section reveal">
-              <h2 data-i18n="case.phases">Project phases</h2>
+
+            <section id="scope" class="case-section reveal">
+              <h2 data-i18n="lumi.scopeTitle">Project scope</h2>
+              <p data-i18n="lumi.scopeText">Because this is an independent project, the case is framed by scope rather than role: product definition, character system design, content production, prototype implementation, launch packaging, and the next iteration plan.</p>
               <div class="phase-list">
                 <article class="phase-item"><strong>01</strong><div><h3 data-i18n="lumi.phase1Title">World and character definition</h3><p data-i18n="lumi.phase1Text">Create the personality system, lore rules, visual cues, and interaction promise for the pixel-alien universe.</p></div></article>
                 <article class="phase-item"><strong>02</strong><div><h3 data-i18n="lumi.phase2Title">Character content system</h3><p data-i18n="lumi.phase2Text">Structure character backgrounds, story fragments, visual cues, and dialogue tone so each alien feels distinct and memorable.</p></div></article>
-                <article class="phase-item"><strong>03</strong><div><h3 data-i18n="lumi.phase3Title">Visual product prototype</h3><p data-i18n="lumi.phase3Text">Turn the concept into a web experience with motion, planet metaphors, and a playful but controlled art direction.</p></div></article>
-                <article class="phase-item"><strong>04</strong><div><h3 data-i18n="lumi.phase4Title">Launch and iteration</h3><p data-i18n="lumi.phase4Text">Package the project as a shipped indie experiment and define the next loop: dialogue, retention, and richer character interaction.</p></div></article>
+                <article class="phase-item"><strong>03</strong><div><h3 data-i18n="lumi.phase3Title">Visual and desktop prototype</h3><p data-i18n="lumi.phase3Text">Turn the concept into a web experience and desktop companion package with motion states, menus, installation notes, and playful visual direction.</p></div></article>
+                <article class="phase-item"><strong>04</strong><div><h3 data-i18n="lumi.phase4Title">Launch and iteration</h3><p data-i18n="lumi.phase4Text">Package the project as a shipped indie experiment and define the next loop: memory, retention, and richer character interaction.</p></div></article>
               </div>
             </section>
+
+            <section id="problem" class="case-section reveal">
+              <h2 data-i18n="lumi.problemTitle">Problem and opportunity</h2>
+              <p data-i18n="lumi.problemText">Most desktop-pet products are visually cute but thin as systems: they can appear on screen, yet rarely carry a stable personality, world logic, dialogue style, or long-term interaction promise. Lumi Galaxy explores whether a small AI-native character universe can make desktop companionship feel more memorable and extensible.</p>
+              <div class="insight-list">
+                <p data-i18n="lumi.problemInsight1">The core opportunity is not only "make a cute pet", but build a reusable character framework that can support different personalities, dialogue tones, visual states, and future memory.</p>
+                <p data-i18n="lumi.problemInsight2">The product needed a narrow MVP: prove the universe, role differences, basic interaction, and launch packaging before expanding into deeper AI companion features.</p>
+              </div>
+            </section>
+
+            <section id="strategy" class="case-section reveal">
+              <h2 data-i18n="lumi.strategyTitle">Product strategy</h2>
+              <p data-i18n="lumi.strategyText">The first version was positioned as a creative AI companion prototype, not a complete productivity tool. The priority was to validate whether the characters, world setting, and desktop/web experience could form a coherent product direction.</p>
+              <div class="case-card-grid">
+                <article class="case-mini-card"><span>MVP</span><h3 data-i18n="lumi.strategyCard1Title">Start with the universe</h3><p data-i18n="lumi.strategyCard1Text">Define the world, character set, visual identity, and interaction promise before adding heavy AI memory or personalization.</p></article>
+                <article class="case-mini-card"><span>UX</span><h3 data-i18n="lumi.strategyCard2Title">Make roles distinct</h3><p data-i18n="lumi.strategyCard2Text">Each companion needs a different emotional rhythm, speaking style, and use scenario so the system does not feel like one generic assistant wearing five skins.</p></article>
+                <article class="case-mini-card"><span>Iteration</span><h3 data-i18n="lumi.strategyCard3Title">Leave room to scale</h3><p data-i18n="lumi.strategyCard3Text">The data-driven character structure keeps the next steps open: more dialogue, persistent memory, richer desktop states, and themed character expansion.</p></article>
+              </div>
+            </section>
+
+            <section id="characters" class="case-section reveal">
+              <h2 data-i18n="lumi.charactersTitle">Character system</h2>
+              <p data-i18n="lumi.charactersText">The character layer is designed as a product system: each alien has an identity, personality, PAD emotion baseline, speaking style, visual assets, and dialogue direction.</p>
+              <div class="case-card-grid">
+                <article class="case-mini-card"><span>Spaco</span><h3 data-i18n="lumi.character1Title">Curious explorer</h3><p data-i18n="lumi.character1Text">High curiosity and light energy; short sentences, sound effects, and a playful habit of reframing human life as alien-world logic.</p></article>
+                <article class="case-mini-card"><span>Daise</span><h3 data-i18n="lumi.character2Title">Gentle caretaker</h3><p data-i18n="lumi.character2Text">Slow, soft, and caring; built for low-pressure companionship, water reminders, and calm emotional support.</p></article>
+                <article class="case-mini-card"><span>Lumi</span><h3 data-i18n="lumi.character3Title">Focused coding partner</h3><p data-i18n="lumi.character3Text">Precise and slightly dry; positioned as a calm companion for work sessions, coding focus, and quiet productivity.</p></article>
+              </div>
+              <div class="tool-stack">
+                <span data-i18n="lumi.characterTag1">Personality baseline</span>
+                <span data-i18n="lumi.characterTag2">PAD emotion parameters</span>
+                <span data-i18n="lumi.characterTag3">Dialogue intent categories</span>
+                <span data-i18n="lumi.characterTag4">Visual state assets</span>
+                <span data-i18n="lumi.characterTag5">Future memory hooks</span>
+              </div>
+            </section>
+
+            <section id="workflow" class="case-section reveal">
+              <h2 data-i18n="lumi.workflowTitle">AI production workflow</h2>
+              <p data-i18n="lumi.workflowText">AI tools were used as production accelerators, while the product decisions stayed human-led: what the product should be, how each character should differ, what to keep in the MVP, and when the output no longer matched the world direction.</p>
+              <div class="agent-flow">
+                <div class="flow-step"><span data-i18n="lumi.workflowStep1">Concept and positioning</span></div>
+                <div class="flow-step"><span data-i18n="lumi.workflowStep2">Character writing and visual drafts</span></div>
+                <div class="flow-step"><span data-i18n="lumi.workflowStep3">Dialogue data and frontend prototype</span></div>
+                <div class="flow-step"><span data-i18n="lumi.workflowStep4">Manual direction, pruning, and launch</span></div>
+              </div>
+              <div class="case-split-note">
+                <p data-i18n="lumi.aiBuildText">AI helped produce character background drafts, pixel-art directions, dialogue variants, page implementation, and iteration options.</p>
+                <p data-i18n="lumi.myJudgmentText">The product judgment stayed in the selection layer: choosing the product boundary, unifying tone, rejecting inconsistent assets, and shaping the roadmap.</p>
+              </div>
+            </section>
+
+            <section id="architecture" class="case-section reveal">
+              <h2 data-i18n="lumi.architectureTitle">Product architecture</h2>
+              <p data-i18n="lumi.architectureText">The case combines a visual layer, a character layer, and a knowledge layer. That structure shows how the project can evolve from a portfolio website into a richer AI companion product with dialogue and persistence.</p>
+              <div class="phase-list">
+                <article class="phase-item"><strong>Display</strong><div><h3 data-i18n="lumi.arch1Title">Web planet and desktop surface</h3><p data-i18n="lumi.arch1Text">A public web case and a desktop companion shell make the product visible, shareable, and easy to inspect.</p></div></article>
+                <article class="phase-item"><strong>Character</strong><div><h3 data-i18n="lumi.arch2Title">Configurable companion data</h3><p data-i18n="lumi.arch2Text">Character profiles, emotional baselines, assets, and dialogue rules are separated from the interface so the universe can expand.</p></div></article>
+                <article class="phase-item"><strong>Interaction</strong><div><h3 data-i18n="lumi.arch3Title">Dialogue, menus, states, and mini-games</h3><p data-i18n="lumi.arch3Text">The experience includes basic interaction hooks that can later connect to memory, personalization, and richer AI behavior.</p></div></article>
+              </div>
+            </section>
+
+            <section id="roadmap" class="case-section reveal">
+              <h2 data-i18n="lumi.roadmapTitle">Iteration roadmap</h2>
+              <p data-i18n="lumi.roadmapText">The roadmap separates what has already been validated from what should come next, so the case reads like an evolving product rather than a one-time visual experiment.</p>
+              <div class="phase-list">
+                <article class="phase-item"><strong>V0</strong><div><h3 data-i18n="lumi.roadmap1Title">World, role, and website</h3><p data-i18n="lumi.roadmap1Text">Define the universe, ship the visual web page, and make the project externally readable.</p></div></article>
+                <article class="phase-item"><strong>V1</strong><div><h3 data-i18n="lumi.roadmap2Title">Desktop pet and interaction shell</h3><p data-i18n="lumi.roadmap2Text">Support desktop presence, menus, state changes, installation notes, and basic playful interactions.</p></div></article>
+                <article class="phase-item"><strong>V2</strong><div><h3 data-i18n="lumi.roadmap3Title">Dialogue and emotional response</h3><p data-i18n="lumi.roadmap3Text">Expand intent recognition, character-specific replies, PAD emotion changes, and small interaction loops.</p></div></article>
+                <article class="phase-item"><strong>V3</strong><div><h3 data-i18n="lumi.roadmap4Title">Memory and character growth</h3><p data-i18n="lumi.roadmap4Text">Add user preferences, long-term memory, relationship progression, and richer companion behavior.</p></div></article>
+              </div>
+            </section>
+
             <section id="outcome" class="case-section reveal">
               <h2 data-i18n="lumi.outcomeTitle">Outcome</h2>
               <p data-i18n="lumi.outcomeText">Demonstrated the feasibility of using a pure AI toolchain to move from creative concept to a launched product prototype. The project shows solo 0-to-1 product shaping, AI-assisted content production, and the ability to turn a playful idea into a polished web artifact.</p>
+              <div class="tool-stack">
+                <span data-i18n="lumi.outcomeTag1">Published web case</span>
+                <span data-i18n="lumi.outcomeTag2">Desktop installation guide</span>
+                <span data-i18n="lumi.outcomeTag3">Character data model</span>
+                <span data-i18n="lumi.outcomeTag4">Dialogue dataset draft</span>
+                <span data-i18n="lumi.outcomeTag5">Iteration roadmap</span>
+              </div>
             </section>
           </div>
         </div>
