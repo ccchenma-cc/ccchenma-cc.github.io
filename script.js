@@ -1381,6 +1381,63 @@ Object.assign(translations.zh, {
   "aigc.outcomeTitle": "成果", "aigc.outcomeText": "一个可运行的 22 节点多智能体工作流，将内容生成转化为受治理的运营流程：完成本地化、评估、错误恢复，并可存储至 Google Sheets。"
 });
 
+Object.assign(translations.en, {
+  "projects.title": "Five product worlds, each given room to breathe.",
+  "project6.title": "AIGC Multi-Agent Marketing Workflow",
+  "aigc.metaTitle": "AIGC Multi-Agent Marketing Workflow | Ma Chen",
+  "aigc.kicker": "Case study · AIGC Multi-Agent Marketing Workflow",
+  "aigc.visualInput": "Marketing Brief Input",
+  "aigc.agentAngle": "Angle Selection", "aigc.agentAngleDesc": "Defines narrative and creative route",
+  "aigc.agentContent": "Content Generation", "aigc.agentContentDesc": "Creates market-ready copy",
+  "aigc.agentCompliance": "Compliance Review", "aigc.agentComplianceDesc": "Checks legal and brand safety",
+  "aigc.agentScore": "Quality Scoring", "aigc.agentScoreDesc": "Evaluates content from 0–100",
+  "aigc.agentRewrite": "Auto-Rewrite", "aigc.agentRewriteDesc": "Improves failed content",
+  "aigc.localEngine": "Localization Quality Engine",
+  "aigc.localSignals": "Slang · Cultural fit · Regulatory compliance",
+  "aigc.retryRule": "Score below threshold",
+  "aigc.retryAction": "Rewrite automatically · max 3×",
+  "aigc.visualOutput": "Ready-to-publish Copy",
+  "aigc.panelStatus": "Campaign ready for approval"
+});
+
+Object.assign(translations.es, {
+  "projects.title": "Cinco mundos de producto, cada uno con espacio para respirar.",
+  "project6.title": "Workflow Multi-Agente de Marketing AIGC",
+  "aigc.metaTitle": "Workflow Multi-Agente de Marketing AIGC | Ma Chen",
+  "aigc.kicker": "Caso · Workflow Multi-Agente de Marketing AIGC",
+  "aigc.visualInput": "Brief de Marketing",
+  "aigc.agentAngle": "Selección de Ángulo", "aigc.agentAngleDesc": "Define narrativa y ruta creativa",
+  "aigc.agentContent": "Generación de Contenido", "aigc.agentContentDesc": "Crea copy listo para el mercado",
+  "aigc.agentCompliance": "Revisión de Cumplimiento", "aigc.agentComplianceDesc": "Comprueba legalidad y brand safety",
+  "aigc.agentScore": "Scoring de Calidad", "aigc.agentScoreDesc": "Evalúa el contenido de 0–100",
+  "aigc.agentRewrite": "Reescritura Automática", "aigc.agentRewriteDesc": "Mejora el contenido no aprobado",
+  "aigc.localEngine": "Motor de Calidad de Localización",
+  "aigc.localSignals": "Slang · Encaje cultural · Cumplimiento regulatorio",
+  "aigc.retryRule": "Puntuación bajo el umbral",
+  "aigc.retryAction": "Reescritura automática · máximo 3×",
+  "aigc.visualOutput": "Copy Listo para Publicar",
+  "aigc.panelStatus": "Campaña lista para aprobación"
+});
+
+Object.assign(translations.zh, {
+  "projects.title": "五个产品世界，各自拥有完整的展示空间。",
+  "project6.title": "AIGC 多智能体营销工作流",
+  "aigc.metaTitle": "AIGC 多智能体营销工作流 | Ma Chen",
+  "aigc.kicker": "案例 · AIGC 多智能体营销工作流",
+  "aigc.visualInput": "营销简报输入",
+  "aigc.agentAngle": "营销角度选择", "aigc.agentAngleDesc": "定义叙事与创意路线",
+  "aigc.agentContent": "内容生成", "aigc.agentContentDesc": "生成符合市场的文案",
+  "aigc.agentCompliance": "合规审核", "aigc.agentComplianceDesc": "检查法规与品牌安全",
+  "aigc.agentScore": "质量评分", "aigc.agentScoreDesc": "对内容进行 0–100 评分",
+  "aigc.agentRewrite": "自动重写", "aigc.agentRewriteDesc": "优化未通过的内容",
+  "aigc.localEngine": "本地化质量引擎",
+  "aigc.localSignals": "俚语适配 · 文化契合 · 法规合规",
+  "aigc.retryRule": "评分低于阈值",
+  "aigc.retryAction": "自动重写 · 最多 3 次",
+  "aigc.visualOutput": "可直接发布的文案",
+  "aigc.panelStatus": "营销活动已准备审批"
+});
+
 const savedLanguage = (() => {
   try {
     return localStorage.getItem("site-lang");
@@ -1402,7 +1459,7 @@ if (toggle) {
 
 (function initProjectReturnPosition() {
   const storageKey = "portfolio-return-position";
-  const casePages = ["mbti-discussion.html", "lumigalaxy.html", "adoptai.html", "macroeconomic-dashboard.html", "ai-workflow-gc.html", "aigc-multi-agent.html"];
+  const casePages = ["mbti-discussion.html", "lumigalaxy.html", "adoptai.html", "macroeconomic-dashboard.html", "aigc-multi-agent.html"];
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const isHome = currentPage === "index.html" || currentPage === "";
 
@@ -1478,12 +1535,15 @@ class InsightGenerator {
     this.count = count;
     this.active = 0;
     this.changedAt = performance.now();
+    this.changed = true;
   }
 
   update(time) {
-    if (time - this.changedAt < 3200) return this.active;
+    this.changed = false;
+    if (time - this.changedAt < 3000) return this.active;
     this.active = (this.active + 1) % this.count;
     this.changedAt = time;
+    this.changed = true;
     return this.active;
   }
 }
@@ -1520,9 +1580,17 @@ class DataOverlayLayer {
   }
 
   update(time) {
-    const active = this.generator.update(time);
-    this.locations.forEach(([lat, lon], index) => {
-      const point = this.positionFromCoordinates(lat, lon);
+    let active = this.generator.update(time);
+    const points = this.locations.map(([lat, lon]) => this.positionFromCoordinates(lat, lon));
+    if (this.generator.changed && !points[active].visible) {
+      const nextVisible = points.findIndex((point, index) => index > active && point.visible);
+      const anyVisible = points.findIndex((point) => point.visible);
+      active = nextVisible >= 0 ? nextVisible : anyVisible >= 0 ? anyVisible : active;
+      this.generator.active = active;
+    }
+    if (this.region) this.region.classList.remove("is-visible");
+    this.locations.forEach((location, index) => {
+      const point = points[index];
       const visible = index === active && point.visible;
       const insight = this.insights[index];
       insight.style.left = `${point.x - 7}px`;

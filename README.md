@@ -6,7 +6,7 @@ Live project links featured in the portfolio:
 
 - MBTI Discussion: https://mbti-discussion.netlify.app/
 - Lumi Galaxy: https://lumigalaxy.github.io/
-- AI Language Companion - Spanish Model
+- AIGC Multi-Agent Marketing Workflow
 
 ## Stack
 
@@ -21,7 +21,7 @@ Live project links featured in the portfolio:
 - `index.html` — main portfolio experience
 - `mbti-discussion.html` — MBTI Discussion project case study
 - `lumigalaxy.html` — Lumi Galaxy project case study
-- `ai-workflow-gc.html` — AI Language Companion - Spanish Model case study shell
+- `aigc-multi-agent.html` — AIGC multi-agent marketing workflow case study
 
 ## Development
 
