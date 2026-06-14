@@ -1258,6 +1258,129 @@ function setLanguage(lang) {
   }
 }
 
+Object.assign(translations.en, {
+  "projects.title": "Six product worlds, each given room to breathe.",
+  "project6.kicker": "AI agent design · Automation · Localization",
+  "project6.title": "AIGC Multi-Agent Workflow",
+  "project6.lead": "A multi-agent marketing system that turns a product brief into publish-ready copy, automatically reviewed, scored, localized, and stored.",
+  "project6.f1": "5 specialized agent stages",
+  "project6.f2": "Four-market localization engine",
+  "project6.f3": "Closed-loop quality retries",
+  "aigc.visualAngle": "Angle", "aigc.visualCreate": "Create", "aigc.visualReview": "Review",
+  "aigc.visualScore": "Score", "aigc.visualRewrite": "Rewrite",
+  "aigc.visualLocalization": "Localization engine · US / MX / LATAM / ES",
+  "aigc.visualLoop": "Closed quality loop · max 3 attempts",
+  "macro.insightLabel": "LIVE MACRO INSIGHT",
+  "macro.insightTitle": "Growth remains resilient",
+  "macro.insightText": "Selected economies outpace the global baseline.",
+  "aigc.metaTitle": "AIGC Multi-Agent Workflow | Ma Chen",
+  "aigc.metaDescription": "AIGC multi-agent marketing workflow case study by Ma Chen: automated generation, localization, compliance, scoring, and retry logic.",
+  "aigc.kicker": "Case study · AIGC Multi-Agent Workflow",
+  "aigc.date": "2026 · Automation system",
+  "aigc.title": "Turning one product brief into localized, publish-ready marketing copy.",
+  "aigc.lead": "A closed-loop n8n workflow where specialized AI stages generate, review, score, rewrite, and store marketing content across four target markets.",
+  "aigc.navWorkflow": "Agent workflow", "aigc.navLocalization": "Localization engine", "aigc.navQuality": "Quality loop",
+  "aigc.overviewTitle": "System lens",
+  "aigc.overviewText": "The workflow transforms a structured product brief into production-ready marketing content while keeping localization, compliance, and quality decisions explicit and auditable.",
+  "aigc.metricAgents": "specialized stages", "aigc.metricMarkets": "target markets", "aigc.metricDimensions": "quality dimensions", "aigc.metricAttempts": "maximum attempts",
+  "aigc.problemTitle": "The problem behind the automation",
+  "aigc.problemText": "Generating a draft is easy. Consistently producing market-appropriate copy that respects product facts, platform conventions, cultural nuance, and regulatory limits requires a coordinated operating system.",
+  "aigc.workflowTitle": "Five specialized stages in sequence",
+  "aigc.workflowText": "Each stage owns one decision and passes structured JSON to the next, making failures traceable and the final output easier to trust.",
+  "aigc.stage1Title": "Select the angle", "aigc.stage1Text": "Generate three differentiated marketing angles from the brief and select the strongest route.",
+  "aigc.stage2Title": "Generate localized content", "aigc.stage2Text": "Write for the selected platform, format, audience, market, objective, and brand tone.",
+  "aigc.stage3Title": "Review compliance", "aigc.stage3Text": "Check unsupported claims, sensitive topics, market risk, and reasons for manual review.",
+  "aigc.stage4Title": "Score quality", "aigc.stage4Text": "Evaluate factual accuracy, localization, platform fit, and marketing effectiveness.",
+  "aigc.stage5Title": "Rewrite or deliver", "aigc.stage5Text": "Rewrite failed content up to three times, then store approved copy or escalate it to a human.",
+  "aigc.localizationTitle": "Localization is a quality dimension, not a translation step",
+  "aigc.localizationText": "The engine changes pronouns, slang tolerance, cultural references, tone, and platform rules for the United States, Mexico, LATAM, and Spain.",
+  "aigc.local1Title": "Market-aware language", "aigc.local1Text": "Separate rules for en-US, es-MX, es-419, and es-ES avoid generic Spanish and forced slang.",
+  "aigc.local2Title": "Platform-aware output", "aigc.local2Text": "Instagram, TikTok, Facebook, and Amazon each receive format-specific structure and tone.",
+  "aigc.local3Title": "Compliance-aware claims", "aigc.local3Text": "Unsupported absolutes and high-risk topics are revised or routed to human review.",
+  "aigc.qualityTitle": "A measurable closed quality loop",
+  "aigc.qualityText": "Content passes only when the total score reaches 30 and every individual dimension clears its own threshold. Otherwise, feedback returns to the generation stage for another attempt.",
+  "aigc.outcomeTitle": "Outcome",
+  "aigc.outcomeText": "A working 22-node multi-agent workflow that turns generation into a governed content operation: localized, evaluated, recoverable, and ready for storage in Google Sheets."
+});
+
+Object.assign(translations.es, {
+  "projects.title": "Seis mundos de producto, cada uno con espacio para respirar.",
+  "project6.kicker": "Diseño de agentes IA · Automatización · Localización",
+  "project6.title": "Workflow Multi-Agente AIGC",
+  "project6.lead": "Un sistema multi-agente de marketing que convierte un brief de producto en copy listo para publicar, revisado, puntuado, localizado y almacenado automáticamente.",
+  "project6.f1": "5 etapas de agentes especializados",
+  "project6.f2": "Motor de localización para cuatro mercados",
+  "project6.f3": "Reintentos de calidad en bucle cerrado",
+  "aigc.visualAngle": "Ángulo", "aigc.visualCreate": "Crear", "aigc.visualReview": "Revisar",
+  "aigc.visualScore": "Puntuar", "aigc.visualRewrite": "Reescribir",
+  "aigc.visualLocalization": "Motor de localización · EE.UU. / MX / LATAM / ES",
+  "aigc.visualLoop": "Bucle de calidad cerrado · máximo 3 intentos",
+  "macro.insightLabel": "INSIGHT MACRO EN VIVO",
+  "macro.insightTitle": "El crecimiento mantiene su resiliencia",
+  "macro.insightText": "Las economías seleccionadas superan la referencia global.",
+  "aigc.metaTitle": "Workflow Multi-Agente AIGC | Ma Chen",
+  "aigc.metaDescription": "Caso de workflow multi-agente AIGC de Ma Chen: generación, localización, cumplimiento, puntuación y reintentos automatizados.",
+  "aigc.kicker": "Caso · Workflow Multi-Agente AIGC",
+  "aigc.date": "2026 · Sistema de automatización",
+  "aigc.title": "Convertir un brief de producto en copy localizado y listo para publicar.",
+  "aigc.lead": "Un workflow de n8n en bucle cerrado donde etapas de IA especializadas generan, revisan, puntúan, reescriben y almacenan contenido para cuatro mercados.",
+  "aigc.navWorkflow": "Workflow de agentes", "aigc.navLocalization": "Motor de localización", "aigc.navQuality": "Bucle de calidad",
+  "aigc.overviewTitle": "Enfoque del sistema",
+  "aigc.overviewText": "El workflow transforma un brief estructurado en contenido de marketing listo para producción, haciendo explícitas y auditables las decisiones de localización, cumplimiento y calidad.",
+  "aigc.metricAgents": "etapas especializadas", "aigc.metricMarkets": "mercados objetivo", "aigc.metricDimensions": "dimensiones de calidad", "aigc.metricAttempts": "intentos máximos",
+  "aigc.problemTitle": "El problema detrás de la automatización",
+  "aigc.problemText": "Generar un borrador es fácil. Producir de forma consistente copy adecuado al mercado que respete hechos, convenciones de plataforma, matices culturales y límites regulatorios exige un sistema coordinado.",
+  "aigc.workflowTitle": "Cinco etapas especializadas en secuencia",
+  "aigc.workflowText": "Cada etapa controla una decisión y pasa JSON estructurado a la siguiente, haciendo los fallos trazables y el resultado final más fiable.",
+  "aigc.stage1Title": "Seleccionar el ángulo", "aigc.stage1Text": "Generar tres ángulos diferenciados desde el brief y elegir la ruta más sólida.",
+  "aigc.stage2Title": "Generar contenido localizado", "aigc.stage2Text": "Escribir según plataforma, formato, audiencia, mercado, objetivo y tono de marca.",
+  "aigc.stage3Title": "Revisar cumplimiento", "aigc.stage3Text": "Comprobar afirmaciones no sustentadas, temas sensibles, riesgo de mercado y motivos de revisión humana.",
+  "aigc.stage4Title": "Puntuar la calidad", "aigc.stage4Text": "Evaluar precisión factual, localización, encaje con la plataforma y efectividad de marketing.",
+  "aigc.stage5Title": "Reescribir o entregar", "aigc.stage5Text": "Reescribir hasta tres veces; después almacenar el copy aprobado o escalarlo a una persona.",
+  "aigc.localizationTitle": "La localización es una dimensión de calidad, no un paso de traducción",
+  "aigc.localizationText": "El motor modifica pronombres, tolerancia al slang, referencias culturales, tono y reglas de plataforma para Estados Unidos, México, LATAM y España.",
+  "aigc.local1Title": "Lenguaje adaptado al mercado", "aigc.local1Text": "Reglas separadas para en-US, es-MX, es-419 y es-ES evitan un español genérico y slang forzado.",
+  "aigc.local2Title": "Salida adaptada a plataforma", "aigc.local2Text": "Instagram, TikTok, Facebook y Amazon reciben estructura y tono específicos.",
+  "aigc.local3Title": "Claims conscientes del cumplimiento", "aigc.local3Text": "Los absolutos sin respaldo y temas de alto riesgo se revisan o pasan a revisión humana.",
+  "aigc.qualityTitle": "Un bucle de calidad cerrado y medible",
+  "aigc.qualityText": "El contenido solo pasa si alcanza 30 puntos y cada dimensión supera su umbral. Si no, el feedback vuelve a generación para otro intento.",
+  "aigc.outcomeTitle": "Resultado",
+  "aigc.outcomeText": "Un workflow multi-agente funcional de 22 nodos que convierte la generación en una operación gobernada: localizada, evaluada, recuperable y lista para almacenarse en Google Sheets."
+});
+
+Object.assign(translations.zh, {
+  "projects.title": "六个产品世界，各自拥有完整的展示空间。",
+  "project6.kicker": "AI 智能体设计 · 自动化 · 本地化",
+  "project6.title": "AIGC 多智能体工作流",
+  "project6.lead": "一个将产品简报转化为可发布营销文案的多智能体系统，并自动完成审核、评分、本地化和存储。",
+  "project6.f1": "5 个专业智能体阶段", "project6.f2": "四市场本地化引擎", "project6.f3": "闭环质量重试",
+  "aigc.visualAngle": "选题", "aigc.visualCreate": "生成", "aigc.visualReview": "审核", "aigc.visualScore": "评分", "aigc.visualRewrite": "重写",
+  "aigc.visualLocalization": "本地化引擎 · 美国 / 墨西哥 / 拉美 / 西班牙",
+  "aigc.visualLoop": "闭环质量机制 · 最多 3 次尝试",
+  "macro.insightLabel": "实时宏观洞察", "macro.insightTitle": "经济增长保持韧性", "macro.insightText": "所选经济体表现高于全球基准。",
+  "aigc.metaTitle": "AIGC 多智能体工作流 | Ma Chen",
+  "aigc.metaDescription": "Ma Chen 的 AIGC 多智能体营销工作流案例：自动生成、本地化、合规审核、评分和重试。",
+  "aigc.kicker": "案例 · AIGC 多智能体工作流", "aigc.date": "2026 · 自动化系统",
+  "aigc.title": "将一份产品简报转化为本地化、可直接发布的营销文案。",
+  "aigc.lead": "一个基于 n8n 的闭环工作流，由专业 AI 阶段为四个目标市场生成、审核、评分、重写并存储内容。",
+  "aigc.navWorkflow": "智能体工作流", "aigc.navLocalization": "本地化引擎", "aigc.navQuality": "质量闭环",
+  "aigc.overviewTitle": "系统视角", "aigc.overviewText": "工作流将结构化产品简报转化为可投入生产的营销内容，同时让本地化、合规与质量决策明确且可追溯。",
+  "aigc.metricAgents": "个专业阶段", "aigc.metricMarkets": "个目标市场", "aigc.metricDimensions": "个质量维度", "aigc.metricAttempts": "次最大尝试",
+  "aigc.problemTitle": "自动化背后的问题", "aigc.problemText": "生成草稿很容易，但要持续产出符合市场、产品事实、平台习惯、文化语境和法规限制的文案，需要一个协调一致的操作系统。",
+  "aigc.workflowTitle": "五个专业阶段依次协作", "aigc.workflowText": "每个阶段负责一个决策，并向下一阶段传递结构化 JSON，让失败可追溯、最终结果更可信。",
+  "aigc.stage1Title": "选择营销角度", "aigc.stage1Text": "根据简报生成三个差异化营销角度，并选择最佳路线。",
+  "aigc.stage2Title": "生成本地化内容", "aigc.stage2Text": "根据平台、格式、受众、市场、目标和品牌语调进行创作。",
+  "aigc.stage3Title": "合规审核", "aigc.stage3Text": "检查无依据的宣传、敏感主题、市场风险和人工审核原因。",
+  "aigc.stage4Title": "质量评分", "aigc.stage4Text": "评估事实准确性、本地化、平台适配和营销效果。",
+  "aigc.stage5Title": "重写或交付", "aigc.stage5Text": "未通过内容最多重写三次，之后存储合格文案或升级人工审核。",
+  "aigc.localizationTitle": "本地化是质量维度，而非翻译步骤", "aigc.localizationText": "引擎针对美国、墨西哥、拉美和西班牙调整代词、俚语使用、文化参照、语气和平台规则。",
+  "aigc.local1Title": "市场化语言", "aigc.local1Text": "en-US、es-MX、es-419 和 es-ES 使用独立规则，避免泛化西语和生硬俚语。",
+  "aigc.local2Title": "平台化输出", "aigc.local2Text": "Instagram、TikTok、Facebook 和 Amazon 分别采用对应结构和语气。",
+  "aigc.local3Title": "合规化宣传", "aigc.local3Text": "无依据的绝对化表述和高风险主题会被修改或转交人工审核。",
+  "aigc.qualityTitle": "可衡量的闭环质量机制", "aigc.qualityText": "内容总分达到 30 且各维度分别超过阈值后才可通过，否则反馈将返回生成阶段再次尝试。",
+  "aigc.outcomeTitle": "成果", "aigc.outcomeText": "一个可运行的 22 节点多智能体工作流，将内容生成转化为受治理的运营流程：完成本地化、评估、错误恢复，并可存储至 Google Sheets。"
+});
+
 const savedLanguage = (() => {
   try {
     return localStorage.getItem("site-lang");
@@ -1279,7 +1402,7 @@ if (toggle) {
 
 (function initProjectReturnPosition() {
   const storageKey = "portfolio-return-position";
-  const casePages = ["mbti-discussion.html", "lumigalaxy.html", "adoptai.html", "macroeconomic-dashboard.html", "ai-workflow-gc.html"];
+  const casePages = ["mbti-discussion.html", "lumigalaxy.html", "adoptai.html", "macroeconomic-dashboard.html", "ai-workflow-gc.html", "aigc-multi-agent.html"];
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const isHome = currentPage === "index.html" || currentPage === "";
 
@@ -1350,133 +1473,187 @@ if (toggle) {
   targets.forEach((target) => observer.observe(target));
 })();
 
-(function initMacroGlobe() {
-  const canvas = document.querySelector(".macro-globe-canvas");
-  const stage = document.querySelector(".macro-globe-stage");
-  if (!(canvas instanceof HTMLCanvasElement) || !stage) return;
-  const globe = canvas.parentElement;
-  if (!globe) return;
-
-  const context = canvas.getContext("2d");
-  if (!context) return;
-
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const insights = [...stage.querySelectorAll("[data-globe-insight]")];
-  const locations = [
-    { lat: 40, lon: -100 },
-    { lat: 50, lon: 10 },
-    { lat: 35, lon: 105 },
-    { lat: -15, lon: -55 }
-  ];
-  const points = [];
-
-  function ellipse(lat, lon, centerLat, centerLon, radiusLat, radiusLon, tilt = 0) {
-    const y = (lat - centerLat) / radiusLat;
-    let x = lon - centerLon;
-    if (x > 180) x -= 360;
-    if (x < -180) x += 360;
-    x /= radiusLon;
-    const cos = Math.cos(tilt);
-    const sin = Math.sin(tilt);
-    const rx = x * cos - y * sin;
-    const ry = x * sin + y * cos;
-    return rx * rx + ry * ry < 1;
+class InsightGenerator {
+  constructor(count) {
+    this.count = count;
+    this.active = 0;
+    this.changedAt = performance.now();
   }
 
-  function isLand(lat, lon) {
-    return (
-      ellipse(lat, lon, 46, -105, 30, 52, -0.18) ||
-      ellipse(lat, lon, 17, -92, 18, 18, -0.5) ||
-      ellipse(lat, lon, -17, -60, 38, 25, 0.22) ||
-      ellipse(lat, lon, 51, 18, 19, 25, 0.12) ||
-      ellipse(lat, lon, 47, 75, 32, 70, -0.1) ||
-      ellipse(lat, lon, 18, 80, 20, 18, -0.2) ||
-      ellipse(lat, lon, 4, 22, 38, 29, 0.12) ||
-      ellipse(lat, lon, -25, 134, 18, 25, -0.12) ||
-      ellipse(lat, lon, 72, -42, 12, 18, 0.1)
+  update(time) {
+    if (time - this.changedAt < 3200) return this.active;
+    this.active = (this.active + 1) % this.count;
+    this.changedAt = time;
+    return this.active;
+  }
+}
+
+class DataOverlayLayer {
+  constructor(stage, sceneElement, globe, camera) {
+    this.stage = stage;
+    this.sceneElement = sceneElement;
+    this.globe = globe;
+    this.camera = camera;
+    this.insights = [...stage.querySelectorAll("[data-globe-insight]")];
+    this.region = stage.querySelector("[data-globe-region]");
+    this.locations = [[40, -100], [50, 10], [35, 105], [-15, -55]];
+    this.generator = new InsightGenerator(this.insights.length);
+  }
+
+  positionFromCoordinates(lat, lon) {
+    const phi = (90 - lat) * Math.PI / 180;
+    const theta = (lon + 180) * Math.PI / 180;
+    const point = new THREE.Vector3(
+      -Math.sin(phi) * Math.cos(theta),
+      Math.cos(phi),
+      Math.sin(phi) * Math.sin(theta)
     );
-  }
-
-  for (let lat = -82; lat <= 82; lat += 5) {
-    const count = Math.max(12, Math.round(72 * Math.cos(lat * Math.PI / 180)));
-    for (let index = 0; index < count; index += 1) {
-      const lon = (index / count) * 360 - 180 + (lat % 10 ? 2.5 : 0);
-      points.push({ lat, lon, land: isLand(lat, lon) });
-    }
-  }
-
-  function project(lat, lon, rotation, radius, centerX, centerY) {
-    const phi = lat * Math.PI / 180;
-    const theta = (lon + rotation) * Math.PI / 180;
-    const x = Math.cos(phi) * Math.sin(theta);
-    const y = Math.sin(phi);
-    const z = Math.cos(phi) * Math.cos(theta);
+    point.applyMatrix4(this.globe.matrixWorld);
+    const facingCamera = point.z > 0.05;
+    point.project(this.camera);
+    const rect = this.sceneElement.getBoundingClientRect();
     return {
-      x: centerX + x * radius,
-      y: centerY - y * radius,
-      z
+      x: this.sceneElement.offsetLeft + (point.x * 0.5 + 0.5) * rect.width,
+      y: this.sceneElement.offsetTop + (-point.y * 0.5 + 0.5) * rect.height,
+      visible: facingCamera && point.z < 1 && point.z > -1
     };
   }
 
-  let rotation = 100;
-  let lastTime = performance.now();
-  let activeInsight = 0;
-  let insightChangedAt = lastTime;
-
-  function resize() {
-    const rect = canvas.getBoundingClientRect();
-    const scale = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.max(1, Math.round(rect.width * scale));
-    canvas.height = Math.max(1, Math.round(rect.height * scale));
-    context.setTransform(scale, 0, 0, scale, 0, 0);
-  }
-
-  function frame(time) {
-    const rect = canvas.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const radius = Math.min(width, height) * 0.46;
-    const centerX = width / 2;
-    const centerY = height / 2;
-    const delta = Math.min(40, time - lastTime);
-    lastTime = time;
-    if (!reduced) rotation = (rotation + delta * 0.006) % 360;
-
-    context.clearRect(0, 0, width, height);
-    points
-      .map((point) => ({ ...point, projected: project(point.lat, point.lon, rotation, radius, centerX, centerY) }))
-      .filter((point) => point.projected.z > -0.12)
-      .sort((a, b) => a.projected.z - b.projected.z)
-      .forEach((point) => {
-        const depth = Math.max(0.12, point.projected.z);
-        const alpha = point.land ? 0.28 + depth * 0.7 : 0.07 + depth * 0.2;
-        const size = point.land ? 1.15 + depth * 1.65 : 0.55 + depth * 0.8;
-        context.beginPath();
-        context.arc(point.projected.x, point.projected.y, size, 0, Math.PI * 2);
-        context.fillStyle = point.land
-          ? `rgba(26, 72, 52, ${alpha})`
-          : `rgba(25, 55, 255, ${alpha})`;
-        context.fill();
-      });
-
-    if (!reduced && time - insightChangedAt > 2800) {
-      activeInsight = (activeInsight + 1) % insights.length;
-      insightChangedAt = time;
-    }
-
-    locations.forEach((location, index) => {
-      const point = project(location.lat, location.lon, rotation, radius, centerX, centerY);
-      const insight = insights[index];
-      const visible = index === activeInsight && point.z > 0.18;
-      insight.style.left = `${globe.offsetLeft + point.x - 7}px`;
-      insight.style.top = `${globe.offsetTop + point.y - 31}px`;
+  update(time) {
+    const active = this.generator.update(time);
+    this.locations.forEach(([lat, lon], index) => {
+      const point = this.positionFromCoordinates(lat, lon);
+      const visible = index === active && point.visible;
+      const insight = this.insights[index];
+      insight.style.left = `${point.x - 7}px`;
+      insight.style.top = `${point.y - 31}px`;
       insight.classList.toggle("is-visible", visible);
+      if (visible && this.region) {
+        this.region.style.left = `${point.x}px`;
+        this.region.style.top = `${point.y}px`;
+        this.region.classList.add("is-visible");
+      }
     });
+  }
+}
 
-    requestAnimationFrame(frame);
+class GlobeAnimationController {
+  constructor(stage, globe, reducedMotion) {
+    this.globe = globe;
+    this.reducedMotion = reducedMotion;
+    this.pointer = { x: 0, y: 0 };
+    stage.addEventListener("pointermove", (event) => {
+      const rect = stage.getBoundingClientRect();
+      this.pointer.x = ((event.clientX - rect.left) / rect.width - 0.5) * 0.22;
+      this.pointer.y = ((event.clientY - rect.top) / rect.height - 0.5) * 0.16;
+    });
+    stage.addEventListener("pointerleave", () => {
+      this.pointer.x = 0;
+      this.pointer.y = 0;
+    });
   }
 
-  resize();
-  window.addEventListener("resize", resize);
-  requestAnimationFrame(frame);
+  update() {
+    if (!this.reducedMotion) this.globe.rotation.y += 0.0015;
+    this.globe.rotation.x += (this.pointer.y - this.globe.rotation.x) * 0.025;
+    this.globe.rotation.z += (-this.pointer.x * 0.35 - this.globe.rotation.z) * 0.025;
+  }
+}
+
+class MacroGlobe {
+  constructor(stage) {
+    this.stage = stage;
+    this.sceneElement = stage.querySelector("[data-globe-scene]");
+    this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!this.sceneElement || !window.THREE) return;
+
+    this.scene = new THREE.Scene();
+    this.camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+    this.camera.position.z = 3.45;
+    this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+    this.sceneElement.appendChild(this.renderer.domElement);
+
+    this.globe = new THREE.Group();
+    this.globe.rotation.y = -1.2;
+    this.scene.add(this.globe);
+    this.createPointCloud();
+    this.createAtmosphere();
+
+    this.controller = new GlobeAnimationController(stage, this.globe, this.reducedMotion);
+    this.overlays = new DataOverlayLayer(stage, this.sceneElement, this.globe, this.camera);
+    this.resize();
+    window.addEventListener("resize", () => this.resize());
+    requestAnimationFrame((time) => this.frame(time));
+  }
+
+  isLand(lat, lon) {
+    const ellipse = (centerLat, centerLon, radiusLat, radiusLon, tilt = 0) => {
+      const y = (lat - centerLat) / radiusLat;
+      let x = lon - centerLon;
+      if (x > 180) x -= 360;
+      if (x < -180) x += 360;
+      x /= radiusLon;
+      const rx = x * Math.cos(tilt) - y * Math.sin(tilt);
+      const ry = x * Math.sin(tilt) + y * Math.cos(tilt);
+      return rx * rx + ry * ry < 1;
+    };
+    return ellipse(46, -105, 30, 52, -0.18) || ellipse(17, -92, 18, 18, -0.5) ||
+      ellipse(-17, -60, 38, 25, 0.22) || ellipse(51, 18, 19, 25, 0.12) ||
+      ellipse(47, 75, 32, 70, -0.1) || ellipse(18, 80, 20, 18, -0.2) ||
+      ellipse(4, 22, 38, 29, 0.12) || ellipse(-25, 134, 18, 25, -0.12) ||
+      ellipse(72, -42, 12, 18, 0.1);
+  }
+
+  createPointCloud() {
+    const land = [];
+    const ocean = [];
+    for (let lat = -86; lat <= 86; lat += 3) {
+      const count = Math.max(20, Math.round(122 * Math.cos(lat * Math.PI / 180)));
+      for (let index = 0; index < count; index += 1) {
+        const lon = index / count * 360 - 180 + (lat % 6 ? 1.5 : 0);
+        const phi = (90 - lat) * Math.PI / 180;
+        const theta = (lon + 180) * Math.PI / 180;
+        const target = this.isLand(lat, lon) ? land : ocean;
+        target.push(-Math.sin(phi) * Math.cos(theta), Math.cos(phi), Math.sin(phi) * Math.sin(theta));
+      }
+    }
+    [[ocean, 0x4076a0, 0.012, 0.22], [land, 0x75ead4, 0.022, 0.92]].forEach(([positions, color, size, opacity]) => {
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+      const material = new THREE.PointsMaterial({
+        color, size, transparent: true, opacity, depthWrite: false, blending: THREE.AdditiveBlending
+      });
+      this.globe.add(new THREE.Points(geometry, material));
+    });
+  }
+
+  createAtmosphere() {
+    const geometry = new THREE.SphereGeometry(1.02, 48, 48);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0x43cbb5, transparent: true, opacity: 0.035, side: THREE.BackSide
+    });
+    this.globe.add(new THREE.Mesh(geometry, material));
+  }
+
+  resize() {
+    const rect = this.sceneElement.getBoundingClientRect();
+    this.camera.aspect = rect.width / Math.max(rect.height, 1);
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(rect.width, rect.height, false);
+  }
+
+  frame(time) {
+    this.controller.update();
+    this.globe.updateMatrixWorld(true);
+    this.overlays.update(time);
+    this.renderer.render(this.scene, this.camera);
+    requestAnimationFrame((nextTime) => this.frame(nextTime));
+  }
+}
+
+(function initMacroGlobe() {
+  const stage = document.querySelector(".macro-globe-stage");
+  if (stage) new MacroGlobe(stage);
 })();

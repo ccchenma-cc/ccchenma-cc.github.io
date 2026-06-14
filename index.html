@@ -110,7 +110,7 @@
       <section id="projects" class="projects">
         <div class="projects-intro section-inner reveal">
           <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
-          <h2 data-i18n="projects.title">Five product worlds, each given room to breathe.</h2>
+          <h2 data-i18n="projects.title">Six product worlds, each given room to breathe.</h2>
           <p data-i18n="projects.sub">
             Full-screen chapters reveal the product story as you scroll: problem, interface logic, key features, and the delivery thinking behind each launch.
           </p>
@@ -190,21 +190,68 @@
           </div>
         </article>
 
-        <article class="project-chapter project-macro">
+        <article class="project-chapter project-aigc">
           <div class="project-art" aria-hidden="true">
-            <div class="macro-globe-stage">
-              <div class="macro-globe">
-                <canvas class="macro-globe-canvas"></canvas>
+            <div class="aigc-flow-visual">
+              <div class="aigc-flow-header"><span>LIVE WORKFLOW</span><b>22 NODES</b></div>
+              <div class="aigc-agent-row">
+                <span><i>01</i><b data-i18n="aigc.visualAngle">Angle</b></span>
+                <em></em>
+                <span><i>02</i><b data-i18n="aigc.visualCreate">Create</b></span>
+                <em></em>
+                <span><i>03</i><b data-i18n="aigc.visualReview">Review</b></span>
+                <em></em>
+                <span><i>04</i><b data-i18n="aigc.visualScore">Score</b></span>
+                <em></em>
+                <span><i>05</i><b data-i18n="aigc.visualRewrite">Rewrite</b></span>
               </div>
-              <span class="macro-insight" data-globe-insight="0"><i></i><span><b data-i18n="macro.signalGdp">GDP growth</b> +2.8%</span></span>
-              <span class="macro-insight" data-globe-insight="1"><i></i><span><b data-i18n="macro.signalCpi">Inflation</b> 2.1%</span></span>
-              <span class="macro-insight" data-globe-insight="2"><i></i><span><b data-i18n="macro.signalRate">Interest rate</b> 4.25%</span></span>
-              <span class="macro-insight" data-globe-insight="3"><i></i><span><b data-i18n="macro.signalTrade">Trade balance</b> +1.4%</span></span>
+              <div class="aigc-quality-rail">
+                <span data-i18n="aigc.visualLocalization">Localization engine · US / MX / LATAM / ES</span>
+                <strong>≥ 30</strong>
+                <span data-i18n="aigc.visualLoop">Closed quality loop · max 3 attempts</span>
+              </div>
             </div>
           </div>
           <div class="section-inner project-content reveal">
             <div class="project-kicker">
               <span>/ 03</span>
+              <span data-i18n="project6.kicker">AI agent design · Automation · Localization</span>
+            </div>
+            <h3 data-i18n="project6.title">AIGC Multi-Agent Workflow</h3>
+            <p class="project-lead" data-i18n="project6.lead">
+              A multi-agent marketing system that turns a product brief into publish-ready copy, automatically reviewed, scored, localized, and stored.
+            </p>
+            <div class="feature-list">
+              <span data-i18n="project6.f1">5 specialized agent stages</span>
+              <span data-i18n="project6.f2">Four-market localization engine</span>
+              <span data-i18n="project6.f3">Closed-loop quality retries</span>
+            </div>
+            <div class="project-actions">
+              <a class="button button-primary" href="aigc-multi-agent.html" data-i18n="project.detail">View how it was made</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-chapter project-macro">
+          <div class="project-art" aria-hidden="true">
+            <div class="macro-globe-stage">
+              <div class="macro-globe" data-globe-scene></div>
+              <div class="macro-globe-orbit"></div>
+              <div class="macro-region-pulse" data-globe-region></div>
+              <span class="macro-insight" data-globe-insight="0"><i></i><span><b data-i18n="macro.signalGdp">GDP growth</b> +2.8%</span></span>
+              <span class="macro-insight" data-globe-insight="1"><i></i><span><b data-i18n="macro.signalCpi">Inflation</b> 2.1%</span></span>
+              <span class="macro-insight" data-globe-insight="2"><i></i><span><b data-i18n="macro.signalRate">Interest rate</b> 4.25%</span></span>
+              <span class="macro-insight" data-globe-insight="3"><i></i><span><b data-i18n="macro.signalTrade">Trade balance</b> +1.4%</span></span>
+              <div class="macro-insight-card" data-globe-card>
+                <small data-i18n="macro.insightLabel">LIVE MACRO INSIGHT</small>
+                <strong data-i18n="macro.insightTitle">Growth remains resilient</strong>
+                <span data-i18n="macro.insightText">Selected economies outpace the global baseline.</span>
+              </div>
+            </div>
+          </div>
+          <div class="section-inner project-content reveal">
+            <div class="project-kicker">
+              <span>/ 04</span>
               <span data-i18n="project5.kicker">Co-created data product · Macroeconomic intelligence</span>
             </div>
             <h3 data-i18n="project5.title">Macroeconomic Dashboard</h3>
@@ -236,7 +283,7 @@
           </div>
           <div class="section-inner project-content reveal">
             <div class="project-kicker">
-              <span>/ 04</span>
+              <span>/ 05</span>
               <span data-i18n="project2.kicker">AI-native creative experiment · Lumi Galaxy</span>
             </div>
             <h3 data-i18n="project2.title">Lumi Galaxy</h3>
@@ -265,7 +312,7 @@
           </div>
           <div class="section-inner project-content reveal">
             <div class="project-kicker">
-              <span>/ 05</span>
+              <span>/ 06</span>
               <span data-i18n="project1.kicker">Community product · MBTI discussion</span>
             </div>
             <h3 data-i18n="project1.title">MBTI Discussion</h3>
@@ -345,6 +392,7 @@
       </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
