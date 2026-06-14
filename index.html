@@ -194,40 +194,12 @@
           <div class="project-art" aria-hidden="true">
             <div class="macro-globe-stage">
               <div class="macro-globe">
-                <svg class="dotted-world" viewBox="0 0 420 420">
-                  <defs>
-                    <pattern id="worldDots" width="7" height="7" patternUnits="userSpaceOnUse">
-                      <circle cx="2.2" cy="2.2" r="1.65"></circle>
-                    </pattern>
-                    <clipPath id="worldClip"><circle cx="210" cy="210" r="194"></circle></clipPath>
-                  </defs>
-                  <g clip-path="url(#worldClip)">
-                    <g class="world-strip">
-                      <g class="world-map-copy">
-                        <path d="M20 96 L48 58 91 39 128 43 151 64 180 65 195 85 177 104 150 109 139 128 114 132 103 153 77 160 59 144 36 135 18 117Z"></path>
-                        <path d="M122 155 L151 161 171 184 168 217 154 245 148 280 126 327 109 310 102 274 89 248 92 214 77 190 91 166Z"></path>
-                        <path d="M192 91 L220 68 252 64 270 75 292 70 330 83 360 108 387 112 402 136 385 151 347 145 322 158 300 151 280 164 255 152 238 132 207 128 184 111Z"></path>
-                        <path d="M232 145 L265 148 286 172 281 207 265 239 244 268 224 247 212 213 217 176Z"></path>
-                        <path d="M331 248 L361 244 388 260 395 284 377 304 345 308 321 289Z"></path>
-                        <path d="M178 50 L191 31 213 28 224 44 211 58 189 61Z"></path>
-                      </g>
-                      <g class="world-map-copy world-map-copy-next">
-                        <path d="M20 96 L48 58 91 39 128 43 151 64 180 65 195 85 177 104 150 109 139 128 114 132 103 153 77 160 59 144 36 135 18 117Z"></path>
-                        <path d="M122 155 L151 161 171 184 168 217 154 245 148 280 126 327 109 310 102 274 89 248 92 214 77 190 91 166Z"></path>
-                        <path d="M192 91 L220 68 252 64 270 75 292 70 330 83 360 108 387 112 402 136 385 151 347 145 322 158 300 151 280 164 255 152 238 132 207 128 184 111Z"></path>
-                        <path d="M232 145 L265 148 286 172 281 207 265 239 244 268 224 247 212 213 217 176Z"></path>
-                        <path d="M331 248 L361 244 388 260 395 284 377 304 345 308 321 289Z"></path>
-                        <path d="M178 50 L191 31 213 28 224 44 211 58 189 61Z"></path>
-                      </g>
-                    </g>
-                  </g>
-                  <circle class="globe-outline" cx="210" cy="210" r="194"></circle>
-                </svg>
+                <canvas class="macro-globe-canvas"></canvas>
               </div>
-              <span class="macro-callout callout-a"><i></i><span><b data-i18n="macro.signalGdp">GDP growth</b> +2.8%</span></span>
-              <span class="macro-callout callout-b"><i></i><span><b data-i18n="macro.signalCpi">Inflation</b> 2.1%</span></span>
-              <span class="macro-callout callout-c"><i></i><span><b data-i18n="macro.signalRate">Interest rate</b> 4.25%</span></span>
-              <span class="macro-callout callout-d"><i></i><span><b data-i18n="macro.signalTrade">Trade balance</b> +1.4%</span></span>
+              <span class="macro-insight" data-globe-insight="0"><i></i><span><b data-i18n="macro.signalGdp">GDP growth</b> +2.8%</span></span>
+              <span class="macro-insight" data-globe-insight="1"><i></i><span><b data-i18n="macro.signalCpi">Inflation</b> 2.1%</span></span>
+              <span class="macro-insight" data-globe-insight="2"><i></i><span><b data-i18n="macro.signalRate">Interest rate</b> 4.25%</span></span>
+              <span class="macro-insight" data-globe-insight="3"><i></i><span><b data-i18n="macro.signalTrade">Trade balance</b> +1.4%</span></span>
             </div>
           </div>
           <div class="section-inner project-content reveal">

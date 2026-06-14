@@ -1349,3 +1349,134 @@ if (toggle) {
 
   targets.forEach((target) => observer.observe(target));
 })();
+
+(function initMacroGlobe() {
+  const canvas = document.querySelector(".macro-globe-canvas");
+  const stage = document.querySelector(".macro-globe-stage");
+  if (!(canvas instanceof HTMLCanvasElement) || !stage) return;
+  const globe = canvas.parentElement;
+  if (!globe) return;
+
+  const context = canvas.getContext("2d");
+  if (!context) return;
+
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const insights = [...stage.querySelectorAll("[data-globe-insight]")];
+  const locations = [
+    { lat: 40, lon: -100 },
+    { lat: 50, lon: 10 },
+    { lat: 35, lon: 105 },
+    { lat: -15, lon: -55 }
+  ];
+  const points = [];
+
+  function ellipse(lat, lon, centerLat, centerLon, radiusLat, radiusLon, tilt = 0) {
+    const y = (lat - centerLat) / radiusLat;
+    let x = lon - centerLon;
+    if (x > 180) x -= 360;
+    if (x < -180) x += 360;
+    x /= radiusLon;
+    const cos = Math.cos(tilt);
+    const sin = Math.sin(tilt);
+    const rx = x * cos - y * sin;
+    const ry = x * sin + y * cos;
+    return rx * rx + ry * ry < 1;
+  }
+
+  function isLand(lat, lon) {
+    return (
+      ellipse(lat, lon, 46, -105, 30, 52, -0.18) ||
+      ellipse(lat, lon, 17, -92, 18, 18, -0.5) ||
+      ellipse(lat, lon, -17, -60, 38, 25, 0.22) ||
+      ellipse(lat, lon, 51, 18, 19, 25, 0.12) ||
+      ellipse(lat, lon, 47, 75, 32, 70, -0.1) ||
+      ellipse(lat, lon, 18, 80, 20, 18, -0.2) ||
+      ellipse(lat, lon, 4, 22, 38, 29, 0.12) ||
+      ellipse(lat, lon, -25, 134, 18, 25, -0.12) ||
+      ellipse(lat, lon, 72, -42, 12, 18, 0.1)
+    );
+  }
+
+  for (let lat = -82; lat <= 82; lat += 5) {
+    const count = Math.max(12, Math.round(72 * Math.cos(lat * Math.PI / 180)));
+    for (let index = 0; index < count; index += 1) {
+      const lon = (index / count) * 360 - 180 + (lat % 10 ? 2.5 : 0);
+      points.push({ lat, lon, land: isLand(lat, lon) });
+    }
+  }
+
+  function project(lat, lon, rotation, radius, centerX, centerY) {
+    const phi = lat * Math.PI / 180;
+    const theta = (lon + rotation) * Math.PI / 180;
+    const x = Math.cos(phi) * Math.sin(theta);
+    const y = Math.sin(phi);
+    const z = Math.cos(phi) * Math.cos(theta);
+    return {
+      x: centerX + x * radius,
+      y: centerY - y * radius,
+      z
+    };
+  }
+
+  let rotation = 100;
+  let lastTime = performance.now();
+  let activeInsight = 0;
+  let insightChangedAt = lastTime;
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    const scale = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.max(1, Math.round(rect.width * scale));
+    canvas.height = Math.max(1, Math.round(rect.height * scale));
+    context.setTransform(scale, 0, 0, scale, 0, 0);
+  }
+
+  function frame(time) {
+    const rect = canvas.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const radius = Math.min(width, height) * 0.46;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const delta = Math.min(40, time - lastTime);
+    lastTime = time;
+    if (!reduced) rotation = (rotation + delta * 0.006) % 360;
+
+    context.clearRect(0, 0, width, height);
+    points
+      .map((point) => ({ ...point, projected: project(point.lat, point.lon, rotation, radius, centerX, centerY) }))
+      .filter((point) => point.projected.z > -0.12)
+      .sort((a, b) => a.projected.z - b.projected.z)
+      .forEach((point) => {
+        const depth = Math.max(0.12, point.projected.z);
+        const alpha = point.land ? 0.28 + depth * 0.7 : 0.07 + depth * 0.2;
+        const size = point.land ? 1.15 + depth * 1.65 : 0.55 + depth * 0.8;
+        context.beginPath();
+        context.arc(point.projected.x, point.projected.y, size, 0, Math.PI * 2);
+        context.fillStyle = point.land
+          ? `rgba(26, 72, 52, ${alpha})`
+          : `rgba(25, 55, 255, ${alpha})`;
+        context.fill();
+      });
+
+    if (!reduced && time - insightChangedAt > 2800) {
+      activeInsight = (activeInsight + 1) % insights.length;
+      insightChangedAt = time;
+    }
+
+    locations.forEach((location, index) => {
+      const point = project(location.lat, location.lon, rotation, radius, centerX, centerY);
+      const insight = insights[index];
+      const visible = index === activeInsight && point.z > 0.18;
+      insight.style.left = `${globe.offsetLeft + point.x - 7}px`;
+      insight.style.top = `${globe.offsetTop + point.y - 31}px`;
+      insight.classList.toggle("is-visible", visible);
+    });
+
+    requestAnimationFrame(frame);
+  }
+
+  resize();
+  window.addEventListener("resize", resize);
+  requestAnimationFrame(frame);
+})();
