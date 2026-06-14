@@ -536,24 +536,9 @@ html[data-lang="zh"] .projects-intro p:not(.eyebrow) {
 
 .project-aigc::before {
   background:
-    radial-gradient(circle at 78% 28%, rgba(81, 103, 255, 0.18), transparent 28rem),
-    radial-gradient(circle at 64% 76%, rgba(37, 209, 163, 0.1), transparent 26rem),
-    linear-gradient(135deg, #080d17, #0d1422 48%, #101827);
-}
-
-.project-aigc .project-kicker,
-.project-aigc .project-content h3 {
-  color: #f3f6fb;
-}
-
-.project-aigc .project-lead {
-  color: rgba(226, 234, 246, 0.68);
-}
-
-.project-aigc .feature-list span {
-  border-color: rgba(133, 157, 207, 0.2);
-  background: rgba(20, 29, 47, 0.66);
-  color: rgba(226, 234, 246, 0.72);
+    radial-gradient(circle at 78% 24%, rgba(91, 112, 255, 0.24), transparent 25rem),
+    radial-gradient(circle at 62% 76%, rgba(50, 214, 164, 0.14), transparent 24rem),
+    linear-gradient(135deg, #eef2ff, #f4f9f7 48%, #fff7ef);
 }
 
 .project-adoptai::before {
@@ -2198,7 +2183,7 @@ html[data-lang="zh"] .contact h2 {
   .planet-stage,
   .adoptai-form-stage,
   .macro-globe-stage,
-  .aigc-saas-visual,
+  .aigc-flow-visual,
   .workflow-map {
     right: -6vw;
     opacity: 0.38;
@@ -2317,7 +2302,7 @@ html[data-lang="zh"] .contact h2 {
 
   .adoptai-form-stage,
   .macro-globe-stage,
-  .aigc-saas-visual {
+  .aigc-flow-visual {
     right: -18vw;
     width: min(88vw, 520px);
   }
@@ -2334,12 +2319,17 @@ html[data-lang="zh"] .contact h2 {
     min-height: 38px;
   }
 
-  .aigc-saas-body { grid-template-columns: 1fr; }
-  .aigc-score-panel { display: none; }
-  .aigc-agent-card span { display: none; }
-  .aigc-agent-card { min-height: 72px; padding: 8px 6px; }
-  .aigc-lower-grid { grid-template-columns: 1fr 1fr; }
-  .aigc-output-card { display: none; }
+  .aigc-agent-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .aigc-agent-row em {
+    display: none;
+  }
+
+  .aigc-agent-row span {
+    min-height: 84px;
+  }
 
   .type-grid span,
   .workflow-map span {
