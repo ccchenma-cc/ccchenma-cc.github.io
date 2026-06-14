@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Macroeconomic Dashboard case study by Ma Chen: a co-created global economic intelligence and data visualization platform." data-i18n-attr="content:macro.metaDescription" />
+    <title data-i18n="macro.metaTitle">Macroeconomic Dashboard | Ma Chen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="case-page">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html#top"><span class="brand-mark"></span><span>Ma Chen</span></a>
+      <nav aria-label="Case navigation">
+        <a href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
+        <a href="https://lozpastor.github.io/Macroeconomic-Dashboard/" target="_blank" rel="noreferrer" data-i18n="case.live">Open live project</a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Switch language">
+        <button type="button" data-lang-option="en">EN</button>
+        <button type="button" data-lang-option="es">ES</button>
+        <button type="button" data-lang-option="zh">中</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="case-hero case-hero-with-art section-inner reveal">
+        <div class="case-hero-copy">
+          <p class="eyebrow" data-i18n="macro.kicker">Co-created case study · Macroeconomic Dashboard</p>
+          <p class="case-date" data-i18n="macro.date">2026 · Collaborative project</p>
+          <h1 data-i18n="macro.title">Making the global economy easier to explore, compare, and explain.</h1>
+          <p data-i18n="macro.lead">A multilingual intelligence workspace that connects official macroeconomic series, global comparison, markets, trade, and automatic insights in one coherent interface.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://lozpastor.github.io/Macroeconomic-Dashboard/" target="_blank" rel="noreferrer" data-i18n="case.live">Open live project</a>
+            <a class="button button-secondary" href="index.html#projects" data-i18n="case.back">Back to portfolio</a>
+          </div>
+        </div>
+        <aside class="case-hero-art macro-hero-art" aria-hidden="true">
+          <div class="macro-terminal">
+            <span>GLOBAL MACRO / LIVE VIEW</span>
+            <strong>212</strong>
+            <small>countries connected</small>
+            <div class="macro-terminal-line"><i></i></div>
+            <div class="macro-terminal-grid"><b>GDP</b><b>CPI</b><b>LABOUR</b><b>TRADE</b><b>RATES</b><b>FISCAL</b></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="case-body section-inner">
+        <div class="case-grid">
+          <aside class="case-sidebar reveal">
+            <a href="#overview" data-i18n="case.overview">Overview</a>
+            <a href="#challenge" data-i18n="macro.navChallenge">Challenge</a>
+            <a href="#process" data-i18n="macro.navProcess">Process</a>
+            <a href="#experience" data-i18n="macro.navExperience">Experience design</a>
+            <a href="#architecture" data-i18n="case.architecture">Product architecture</a>
+            <a href="#collaboration" data-i18n="macro.navCollaboration">Collaboration</a>
+            <a href="#outcome" data-i18n="case.outcome">Outcome</a>
+          </aside>
+          <div>
+            <section id="overview" class="case-section reveal">
+              <h2 data-i18n="macro.overviewTitle">Product lens</h2>
+              <p data-i18n="macro.overviewText">Macroeconomic data is abundant but fragmented across providers, frequencies, units, and interfaces. The product creates one exploration layer where users can move from a global signal to a country comparison or historical series without losing context.</p>
+              <div class="metric-strip">
+                <div><strong>212</strong><span data-i18n="macro.metricCountries">countries</span></div>
+                <div><strong>6</strong><span data-i18n="macro.metricCategories">indicator categories</span></div>
+                <div><strong>4</strong><span data-i18n="macro.metricFreq">time frequencies</span></div>
+                <div><strong>8</strong><span data-i18n="macro.metricSources">data sources</span></div>
+              </div>
+            </section>
+
+            <section id="challenge" class="case-section reveal">
+              <h2 data-i18n="macro.challengeTitle">Challenge</h2>
+              <p data-i18n="macro.challengeText">The hard part was not drawing more charts. It was designing a consistent mental model across GDP, inflation, labour, monetary policy, trade, markets, and fiscal sustainability while preserving the differences that make each indicator meaningful.</p>
+              <div class="insight-list">
+                <p data-i18n="macro.challenge1">Users needed to switch between world, country, and multi-country views without rebuilding the analysis each time.</p>
+                <p data-i18n="macro.challenge2">Annual, quarterly, monthly, and daily series needed shared controls without creating misleading comparisons.</p>
+                <p data-i18n="macro.challenge3">The interface needed to explain signals, not merely display raw numbers.</p>
+              </div>
+            </section>
+
+            <section id="process" class="case-section reveal">
+              <h2 data-i18n="macro.processTitle">Building the intelligence layer</h2>
+              <div class="phase-list">
+                <article class="phase-item"><strong>01</strong><div><h3 data-i18n="macro.phase1Title">Define the economic taxonomy</h3><p data-i18n="macro.phase1Text">Organize the workspace into six readable categories and define the right unit, frequency, scope, and explanatory text for each indicator.</p></div></article>
+                <article class="phase-item"><strong>02</strong><div><h3 data-i18n="macro.phase2Title">Unify data and interaction rules</h3><p data-i18n="macro.phase2Text">Normalize country identifiers, periods, currencies, sources, and chart behavior so each view feels related without hiding data limitations.</p></div></article>
+                <article class="phase-item"><strong>03</strong><div><h3 data-i18n="macro.phase3Title">Design comparison workflows</h3><p data-i18n="macro.phase3Text">Connect map selection, rankings, time series, trade categories, currency controls, and multi-country comparison into one synchronized workspace.</p></div></article>
+                <article class="phase-item"><strong>04</strong><div><h3 data-i18n="macro.phase4Title">Add interpretation and delivery</h3><p data-i18n="macro.phase4Text">Generate automatic insights from visible data, localize the experience, automate data refreshes, and package the frontend for GitHub Pages.</p></div></article>
+              </div>
+            </section>
+
+            <section id="experience" class="case-section reveal">
+              <h2 data-i18n="macro.experienceTitle">Experience design</h2>
+              <p data-i18n="macro.experienceText">The dashboard behaves like an analytical workspace rather than a fixed report. Filters and selections remain synchronized while the interface changes shape to fit global series, country rankings, comparisons, markets, or trade analysis.</p>
+              <div class="case-card-grid">
+                <article class="case-mini-card"><span>Explore</span><h3 data-i18n="macro.exp1Title">Global to local</h3><p data-i18n="macro.exp1Text">Start from a world map or global trend, then focus on a country, continent, or selected comparison group.</p></article>
+                <article class="case-mini-card"><span>Compare</span><h3 data-i18n="macro.exp2Title">Comparable context</h3><p data-i18n="macro.exp2Text">See rankings, averages, extremes, and historical trends using the same active indicator and period.</p></article>
+                <article class="case-mini-card"><span>Explain</span><h3 data-i18n="macro.exp3Title">Automatic insights</h3><p data-i18n="macro.exp3Text">Translate visible data into concise observations about leaders, gaps, changes, concentration, and trends.</p></article>
+              </div>
+            </section>
+
+            <section id="architecture" class="case-section reveal">
+              <h2 data-i18n="macro.architectureTitle">Product architecture</h2>
+              <p data-i18n="macro.architectureText">The live frontend sits on top of a broader production-ready concept: official-source connectors, temporal storage, analytical services, automatic refreshes, and a multilingual visualization layer.</p>
+              <div class="agent-flow">
+                <div class="flow-step"><span data-i18n="macro.flow1">Official data sources</span></div>
+                <div class="flow-step"><span data-i18n="macro.flow2">ETL + normalization</span></div>
+                <div class="flow-step"><span data-i18n="macro.flow3">Analytics + insights</span></div>
+                <div class="flow-step"><span data-i18n="macro.flow4">Interactive workspace</span></div>
+              </div>
+              <div class="tool-stack">
+                <span>Next.js 15</span><span>TypeScript</span><span>ECharts</span><span>Zustand</span><span>FastAPI</span><span>PostgreSQL</span><span>Airflow</span><span>dbt</span>
+              </div>
+            </section>
+
+            <section id="collaboration" class="case-section reveal">
+              <h2 data-i18n="macro.collaborationTitle">Co-creation and iteration</h2>
+              <p data-i18n="macro.collaborationText">This was a co-created project shaped through continuous product and technical iteration. The work required aligning economic meaning, interaction behavior, data constraints, multilingual presentation, and implementation decisions across a shared repository.</p>
+              <div class="case-split-note">
+                <p data-i18n="macro.collab1">Product work focused on making dense macroeconomic information navigable, comparable, and understandable across different user questions.</p>
+                <p data-i18n="macro.collab2">Technical work established a scalable path from a rich static dataset toward official connectors, APIs, temporal storage, forecasting, and production infrastructure.</p>
+              </div>
+            </section>
+
+            <section id="outcome" class="case-section reveal">
+              <h2 data-i18n="macro.outcomeTitle">Outcome</h2>
+              <p data-i18n="macro.outcomeText">A live multilingual macroeconomic intelligence product with global scope, deep temporal exploration, synchronized country comparisons, market and trade modules, automatic insights, and a credible path toward a production data platform.</p>
+              <div class="tool-stack">
+                <span data-i18n="macro.tag1">Live global dashboard</span>
+                <span data-i18n="macro.tag2">Multi-country comparison</span>
+                <span data-i18n="macro.tag3">Trade and markets</span>
+                <span data-i18n="macro.tag4">Automatic insights</span>
+                <span data-i18n="macro.tag5">Automated data refresh</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
