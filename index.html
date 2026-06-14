@@ -122,14 +122,14 @@
               <span class="adoptai-shape shape-sun"></span>
               <span class="adoptai-shape shape-coral"></span>
               <div class="adoptai-form">
-                <div class="adoptai-form-meta"><span>AdoptAI</span><span>1 de 7</span></div>
+                <div class="adoptai-form-meta"><span>AdoptAI</span><span data-i18n="adopt.formProgress">1 of 7</span></div>
                 <span class="adoptai-step">01 →</span>
-                <strong>¿En qué sector opera tu empresa?</strong>
-                <p>Esto nos ayuda a adaptar las oportunidades a tu sector.</p>
-                <div class="adoptai-option is-selected"><i>✓</i><span>Tecnología</span></div>
-                <div class="adoptai-option"><i>2</i><span>Servicios financieros</span></div>
-                <div class="adoptai-option"><i>3</i><span>Sanidad</span></div>
-                <button type="button">Continuar&nbsp; →</button>
+                <strong data-i18n="adopt.formQuestion">What industry does your company operate in?</strong>
+                <p data-i18n="adopt.formHelp">This helps us tailor opportunities to your sector.</p>
+                <div class="adoptai-option is-selected"><i>✓</i><span data-i18n="adopt.formOption1">Technology</span></div>
+                <div class="adoptai-option"><i>2</i><span data-i18n="adopt.formOption2">Financial services</span></div>
+                <div class="adoptai-option"><i>3</i><span data-i18n="adopt.formOption3">Healthcare</span></div>
+                <button type="button"><span data-i18n="adopt.formContinue">Continue</span>&nbsp; →</button>
               </div>
             </div>
           </div>
@@ -157,17 +157,17 @@
         <article class="project-chapter project-workflow">
           <div class="project-art" aria-hidden="true">
             <div class="workflow-map">
-              <span>Brief</span>
+              <span data-i18n="workflow.visualBrief">Brief</span>
               <i></i>
-              <span>Research</span>
+              <span data-i18n="workflow.visualResearch">Research</span>
               <i></i>
-              <span>Angle</span>
+              <span data-i18n="workflow.visualAngle">Angle</span>
               <i></i>
-              <span>Draft</span>
+              <span data-i18n="workflow.visualDraft">Draft</span>
               <i></i>
-              <span>QA</span>
+              <span data-i18n="workflow.visualQa">QA</span>
               <i></i>
-              <span>Publish</span>
+              <span data-i18n="workflow.visualPublish">Publish</span>
             </div>
           </div>
           <div class="section-inner project-content reveal">
@@ -193,19 +193,41 @@
         <article class="project-chapter project-macro">
           <div class="project-art" aria-hidden="true">
             <div class="macro-globe-stage">
-              <div class="macro-orbit orbit-one"></div>
-              <div class="macro-orbit orbit-two"></div>
               <div class="macro-globe">
-                <span class="globe-land land-a"></span>
-                <span class="globe-land land-b"></span>
-                <span class="globe-land land-c"></span>
-                <i class="scan-line"></i>
+                <svg class="dotted-world" viewBox="0 0 420 420">
+                  <defs>
+                    <pattern id="worldDots" width="7" height="7" patternUnits="userSpaceOnUse">
+                      <circle cx="2.2" cy="2.2" r="1.65"></circle>
+                    </pattern>
+                    <clipPath id="worldClip"><circle cx="210" cy="210" r="194"></circle></clipPath>
+                  </defs>
+                  <g clip-path="url(#worldClip)">
+                    <g class="world-strip">
+                      <g class="world-map-copy">
+                        <path d="M20 96 L48 58 91 39 128 43 151 64 180 65 195 85 177 104 150 109 139 128 114 132 103 153 77 160 59 144 36 135 18 117Z"></path>
+                        <path d="M122 155 L151 161 171 184 168 217 154 245 148 280 126 327 109 310 102 274 89 248 92 214 77 190 91 166Z"></path>
+                        <path d="M192 91 L220 68 252 64 270 75 292 70 330 83 360 108 387 112 402 136 385 151 347 145 322 158 300 151 280 164 255 152 238 132 207 128 184 111Z"></path>
+                        <path d="M232 145 L265 148 286 172 281 207 265 239 244 268 224 247 212 213 217 176Z"></path>
+                        <path d="M331 248 L361 244 388 260 395 284 377 304 345 308 321 289Z"></path>
+                        <path d="M178 50 L191 31 213 28 224 44 211 58 189 61Z"></path>
+                      </g>
+                      <g class="world-map-copy world-map-copy-next">
+                        <path d="M20 96 L48 58 91 39 128 43 151 64 180 65 195 85 177 104 150 109 139 128 114 132 103 153 77 160 59 144 36 135 18 117Z"></path>
+                        <path d="M122 155 L151 161 171 184 168 217 154 245 148 280 126 327 109 310 102 274 89 248 92 214 77 190 91 166Z"></path>
+                        <path d="M192 91 L220 68 252 64 270 75 292 70 330 83 360 108 387 112 402 136 385 151 347 145 322 158 300 151 280 164 255 152 238 132 207 128 184 111Z"></path>
+                        <path d="M232 145 L265 148 286 172 281 207 265 239 244 268 224 247 212 213 217 176Z"></path>
+                        <path d="M331 248 L361 244 388 260 395 284 377 304 345 308 321 289Z"></path>
+                        <path d="M178 50 L191 31 213 28 224 44 211 58 189 61Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                  <circle class="globe-outline" cx="210" cy="210" r="194"></circle>
+                </svg>
               </div>
-              <span class="macro-signal signal-a"><b>GDP</b> +2.8%</span>
-              <span class="macro-signal signal-b"><b>CPI</b> 2.1%</span>
-              <span class="macro-signal signal-c"><b>RATE</b> 4.25%</span>
-              <span class="macro-signal signal-d"><b>TRADE</b> +1.4%</span>
-              <span class="macro-signal signal-e"><b>LABOUR</b> 5.7%</span>
+              <span class="macro-callout callout-a"><i></i><span><b data-i18n="macro.signalGdp">GDP growth</b> +2.8%</span></span>
+              <span class="macro-callout callout-b"><i></i><span><b data-i18n="macro.signalCpi">Inflation</b> 2.1%</span></span>
+              <span class="macro-callout callout-c"><i></i><span><b data-i18n="macro.signalRate">Interest rate</b> 4.25%</span></span>
+              <span class="macro-callout callout-d"><i></i><span><b data-i18n="macro.signalTrade">Trade balance</b> +1.4%</span></span>
             </div>
           </div>
           <div class="section-inner project-content reveal">

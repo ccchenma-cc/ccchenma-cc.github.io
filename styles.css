@@ -783,6 +783,11 @@ html[data-lang="zh"] .projects-intro p:not(.eyebrow) {
   letter-spacing: -0.055em;
 }
 
+html[data-lang="zh"] .adoptai-form strong {
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
 .adoptai-form p {
   margin-top: 16px;
   color: rgba(45, 22, 88, 0.58);
@@ -851,94 +856,112 @@ html[data-lang="zh"] .projects-intro p:not(.eyebrow) {
 
 .macro-globe {
   position: absolute;
-  inset: 16%;
-  overflow: hidden;
-  border: 1px solid rgba(25, 55, 255, 0.24);
+  inset: 12%;
   border-radius: 50%;
-  background:
-    repeating-linear-gradient(0deg, transparent 0 31px, rgba(255,255,255,.22) 32px 33px),
-    repeating-linear-gradient(90deg, transparent 0 42px, rgba(255,255,255,.16) 43px 44px),
-    radial-gradient(circle at 34% 28%, #76b9ff, #2365ba 48%, #153f79 74%);
+  background: rgba(255, 253, 248, 0.62);
   box-shadow:
-    inset -34px -18px 50px rgba(4, 22, 48, 0.36),
-    inset 18px 12px 34px rgba(255,255,255,.2),
-    0 34px 80px rgba(25, 55, 255, 0.25);
-  animation: globeTurn 12s linear infinite;
+    inset -28px -10px 50px rgba(20, 20, 20, 0.08),
+    inset 18px 12px 34px rgba(255,255,255,.72),
+    0 34px 80px rgba(28, 24, 18, 0.15);
 }
 
-.globe-land {
-  position: absolute;
-  background: #9ed4b1;
-  box-shadow: inset -8px -5px 0 rgba(46,125,91,.16);
+.dotted-world {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
-.land-a { left: 8%; top: 22%; width: 42%; height: 32%; border-radius: 58% 42% 48% 52% / 48% 54% 46% 52%; transform: rotate(-18deg); }
-.land-b { right: 4%; top: 20%; width: 42%; height: 27%; border-radius: 40% 60% 46% 54% / 55% 43% 57% 45%; transform: rotate(16deg); }
-.land-c { right: 21%; bottom: 10%; width: 23%; height: 35%; border-radius: 48% 52% 60% 40% / 38% 46% 54% 62%; transform: rotate(18deg); }
-
-.scan-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -8%;
-  height: 12%;
-  background: linear-gradient(180deg, transparent, rgba(150, 255, 219, 0.7), transparent);
-  box-shadow: 0 0 24px rgba(150, 255, 219, 0.44);
-  animation: globeScan 3.6s ease-in-out infinite;
+.world-strip {
+  animation: dottedWorldTurn 15s linear infinite;
 }
 
-.macro-orbit {
-  position: absolute;
-  inset: 9%;
-  border: 1px solid rgba(25, 55, 255, 0.16);
-  border-radius: 50%;
-  transform: rotate(18deg) scaleY(0.45);
+.world-map-copy {
+  fill: url("#worldDots");
+  color: #15251e;
+  opacity: 0.9;
 }
 
-.orbit-one { animation: orbitTurn 9s linear infinite; }
-.orbit-two { inset: 4%; border-color: rgba(46,125,91,.18); transform: rotate(-28deg) scaleY(.52); animation: orbitTurnReverse 13s linear infinite; }
+.world-map-copy-next {
+  transform: translateX(420px);
+}
 
-.macro-signal {
+.globe-outline {
+  fill: none;
+  stroke: rgba(20, 20, 20, 0.22);
+  stroke-width: 1.5;
+}
+
+.macro-callout {
   position: absolute;
   z-index: 3;
-  padding: 9px 12px;
+  width: 156px;
+  height: 72px;
+  opacity: 0;
+  animation: macroCalloutCycle 12s ease-in-out infinite;
+}
+
+.macro-callout::before {
+  position: absolute;
+  left: 14px;
+  top: 38px;
+  width: 68px;
+  height: 1px;
+  content: "";
+  background: rgba(20, 20, 20, 0.46);
+  transform: rotate(-24deg);
+  transform-origin: left center;
+}
+
+.macro-callout i {
+  position: absolute;
+  left: 4px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: rgba(255, 253, 248, 0.7);
+  box-shadow: 0 0 0 6px rgba(232, 75, 44, 0.1);
+}
+
+.macro-callout span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 104px;
+  padding: 9px 11px;
   border: 1px solid rgba(20,20,20,.13);
-  border-radius: 12px;
-  background: rgba(255,253,248,.84);
-  box-shadow: 0 14px 32px rgba(28,24,18,.1);
+  border-radius: 10px;
+  background: rgba(255,253,248,.9);
+  box-shadow: 0 12px 28px rgba(28,24,18,.1);
   color: var(--ink-soft);
-  font-size: .7rem;
+  font-size: .68rem;
   font-weight: 800;
   backdrop-filter: blur(12px);
-  animation: signalPulse 3.8s ease-in-out infinite alternate;
 }
 
-.macro-signal b { margin-right: 6px; color: var(--green); }
-.signal-a { left: 0; top: 18%; }
-.signal-b { right: 0; top: 13%; animation-delay: -.8s; }
-.signal-c { right: -2%; bottom: 25%; animation-delay: -1.6s; }
-.signal-d { left: 3%; bottom: 17%; animation-delay: -2.3s; }
-.signal-e { left: 38%; bottom: 0; animation-delay: -3s; }
-
-@keyframes globeTurn {
-  to { transform: rotate(360deg); }
+.macro-callout b {
+  display: block;
+  color: var(--green);
+  font-size: .6rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
-@keyframes globeScan {
-  50% { top: 94%; }
-  100% { top: -8%; }
+.callout-a { left: 1%; top: 14%; }
+.callout-b { right: -2%; top: 20%; animation-delay: 3s; transform: scaleX(-1); }
+.callout-c { right: 0; bottom: 17%; animation-delay: 6s; transform: scaleX(-1); }
+.callout-d { left: 2%; bottom: 13%; animation-delay: 9s; }
+.callout-b span, .callout-c span { transform: scaleX(-1); }
+
+@keyframes dottedWorldTurn {
+  to { transform: translateX(-420px); }
 }
 
-@keyframes orbitTurn {
-  to { transform: rotate(378deg) scaleY(0.45); }
-}
-
-@keyframes orbitTurnReverse {
-  to { transform: rotate(-388deg) scaleY(0.52); }
-}
-
-@keyframes signalPulse {
-  to { transform: translateY(-8px); box-shadow: 0 18px 38px rgba(28,24,18,.16); }
+@keyframes macroCalloutCycle {
+  0%, 4%, 25%, 100% { opacity: 0; }
+  8%, 21% { opacity: 1; }
 }
 
 .workflow-map span {
