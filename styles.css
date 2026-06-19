@@ -2378,3 +2378,32 @@ html[data-lang="zh"] .contact h2 {
   text-align: center;
   border-top: 1px solid var(--border);
 }
+
+/* Workflow pan/zoom viewport */
+.workflow-pan-hint {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+
+.workflow-viewport {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  cursor: grab;
+  position: relative;
+  background: var(--surface);
+}
+
+.workflow-viewport img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: 0 0;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+}
