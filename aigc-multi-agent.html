@@ -74,7 +74,10 @@
                 <article class="phase-item"><strong>05</strong><div><h3 data-i18n="aigc.stage5Title">Rewrite or deliver</h3><p data-i18n="aigc.stage5Text">Rewrite failed content up to three times, then store approved copy or escalate it to a human.</p></div></article>
               </div>
               <figure class="workflow-screenshot">
-                <img src="assets/aigc-workflow.png" alt="n8n workflow canvas showing all 22 nodes across 5 agent stages" loading="lazy" />
+                <div class="workflow-pan-hint">Scroll to zoom · Drag to pan · Double-click to reset</div>
+                <div class="workflow-viewport" id="workflowViewport">
+                  <img src="assets/aigc-workflow.png" alt="n8n workflow canvas showing all 22 nodes across 5 agent stages" id="workflowImg" draggable="false" />
+                </div>
                 <figcaption data-i18n="aigc.workflowCaption">The complete n8n workflow — 22 nodes, 5 specialized agents, one closed loop.</figcaption>
               </figure>
             </section>
@@ -110,5 +113,72 @@
       </section>
     </main>
     <script src="script.js?v=20260614-4"></script>
+    <script>
+      (function() {
+        var viewport = document.getElementById('workflowViewport');
+        var img = document.getElementById('workflowImg');
+        if (!viewport || !img) return;
+        var scale = 1, minScale = 0.5, maxScale = 4;
+        var tx = 0, ty = 0;
+        var dragging = false, startX, startY, startTx, startTy;
+
+        function apply() {
+          img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+        }
+
+        viewport.addEventListener('wheel', function(e) {
+          e.preventDefault();
+          var rect = viewport.getBoundingClientRect();
+          var mx = e.clientX - rect.left;
+          var my = e.clientY - rect.top;
+          var delta = e.deltaY > 0 ? 0.9 : 1.1;
+          var newScale = Math.min(maxScale, Math.max(minScale, scale * delta));
+          tx = mx - (mx - tx) * (newScale / scale);
+          ty = my - (my - ty) * (newScale / scale);
+          scale = newScale;
+          apply();
+        }, { passive: false });
+
+        viewport.addEventListener('mousedown', function(e) {
+          dragging = true;
+          startX = e.clientX; startY = e.clientY;
+          startTx = tx; startTy = ty;
+          viewport.style.cursor = 'grabbing';
+        });
+        window.addEventListener('mousemove', function(e) {
+          if (!dragging) return;
+          tx = startTx + (e.clientX - startX);
+          ty = startTy + (e.clientY - startY);
+          apply();
+        });
+        window.addEventListener('mouseup', function() {
+          dragging = false;
+          viewport.style.cursor = 'grab';
+        });
+
+        viewport.addEventListener('dblclick', function() {
+          scale = 1; tx = 0; ty = 0; apply();
+        });
+
+        var lastDist = null;
+        viewport.addEventListener('touchstart', function(e) {
+          if (e.touches.length === 2) lastDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+          else if (e.touches.length === 1) { dragging = true; startX = e.touches[0].clientX; startY = e.touches[0].clientY; startTx = tx; startTy = ty; }
+        }, { passive: true });
+        viewport.addEventListener('touchmove', function(e) {
+          if (e.touches.length === 2) {
+            e.preventDefault();
+            var dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+            if (lastDist) { scale = Math.min(maxScale, Math.max(minScale, scale * dist / lastDist)); apply(); }
+            lastDist = dist;
+          } else if (e.touches.length === 1 && dragging) {
+            tx = startTx + (e.touches[0].clientX - startX);
+            ty = startTy + (e.touches[0].clientY - startY);
+            apply();
+          }
+        }, { passive: false });
+        viewport.addEventListener('touchend', function() { dragging = false; lastDist = null; });
+      })();
+    </script>
   </body>
 </html>
