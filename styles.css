@@ -2355,3 +2355,26 @@ html[data-lang="zh"] .contact h2 {
     transform: none;
   }
 }
+
+/* Workflow screenshot */
+.workflow-screenshot {
+  margin: 2.5rem 0 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.workflow-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.workflow-screenshot figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
